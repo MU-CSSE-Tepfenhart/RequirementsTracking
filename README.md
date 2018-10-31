@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # SRTdash admin dashboard
 Free admin dashboard template
 
@@ -51,3 +52,7 @@ Initial Release
 ### License
 
 SRTdash is licensed under The MIT License (MIT). Which means that you can use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the final products. But you always need to state that Colorlib is the original author of this template.
+=======
+# RequirementsTracking
+Program to track requirements.
+>>>>>>> ab5b787660932e964ec4b4653778fb3caaa8f9d1
