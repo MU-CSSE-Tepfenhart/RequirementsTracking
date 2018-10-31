@@ -30,6 +30,7 @@
 </head>
 
 <body>
+	
     <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -369,103 +370,57 @@
                                     <table id="dataTable2" class="text-center">
                                         <thead class="text-capitalize">
                                             <tr>
-                                                <th>Name</th>
-                                                <th>Position</th>
-                                                <th>Office</th>
-                                                <th>Age</th>
+                                                <th>Req ID</th>
+												<th>Type</th>
                                                 <th>Start Date</th>
-                                                <th>salary</th>
+                                                <th>End Date</th>
+                                                <th>Assigner</th>
+                                                <th>Parent Req ID</th>
+                                                <th>Summary</th>
+												<th>Assignee</th>
+                                                <th>Version</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>Airi Satou</td>
-                                                <td>Accountant</td>
-                                                <td>Tokyo</td>
-                                                <td>33</td>
-                                                <td>2008/11/28</td>
-                                                <td>$162,700</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Angelica Ramos</td>
-                                                <td>Chief Executive Officer (CEO)</td>
-                                                <td>London</td>
-                                                <td>47</td>
-                                                <td>2009/10/09</td>
-                                                <td>$1,200,000</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Ashton Cox</td>
-                                                <td>Junior Technical Author</td>
-                                                <td>San Francisco</td>
-                                                <td>66</td>
-                                                <td>2009/01/12</td>
-                                                <td>$86,000</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Bradley Greer</td>
-                                                <td>Software Engineer</td>
-                                                <td>London</td>
-                                                <td>41</td>
-                                                <td>2012/10/13</td>
-                                                <td>$132,000</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Brenden Wagner</td>
-                                                <td>Software Engineer</td>
-                                                <td>San Francisco</td>
-                                                <td>28</td>
-                                                <td>2011/06/07</td>
-                                                <td>$206,850</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Caesar Vance</td>
-                                                <td>Pre-Sales Support</td>
-                                                <td>New York</td>
-                                                <td>29</td>
-                                                <td>2011/12/12</td>
-                                                <td>$106,450</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Bruno Nash</td>
-                                                <td>Software Engineer</td>
-                                                <td>Edinburgh</td>
-                                                <td>21</td>
-                                                <td>2012/03/29</td>
-                                                <td>$433,060</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Bradley Greer</td>
-                                                <td>Software Engineer</td>
-                                                <td>London</td>
-                                                <td>41</td>
-                                                <td>2012/10/13</td>
-                                                <td>$132,000</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Brenden Wagner</td>
-                                                <td>Software Engineer</td>
-                                                <td>San Francisco</td>
-                                                <td>28</td>
-                                                <td>2011/06/07</td>
-                                                <td>$206,850</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Caesar Vance</td>
-                                                <td>Pre-Sales Support</td>
-                                                <td>New York</td>
-                                                <td>29</td>
-                                                <td>2011/12/12</td>
-                                                <td>$106,450</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Bruno Nash</td>
-                                                <td>Software Engineer</td>
-                                                <td>Edinburgh</td>
-                                                <td>21</td>
-                                                <td>2012/03/29</td>
-                                                <td>$433,060</td>
-                                            </tr>
+										<?php
+											$servername = "localhost";
+											$username = "username";
+											$password = "password";
+											$dbname = "reqdDB";
+
+											// Create connection
+											$conn = new mysqli($servername, $username, $password, $dbname);
+
+											// Check connection
+											if ($conn->connect_error) {
+												die("Connection failed: " . $conn->connect_error);
+											} 
+											echo "Connected successfully";
+											
+											$display = 1000;
+											if (isset($_GET["page"])) { $page  = $_GET["page"]; } else { $page=1; }; 
+											$start_from = ($page-1) * $display;
+											$q = "SELECT * FROM requirements ORDER BY requirement_id ASC LIMIT ". $start_from.", ". $display;
+											
+											$r = $conn->query($q) or die($conn->error);
+												while (($row = $r->fetch_assoc()) !== null){
+													
+													echo "<tr>";
+														echo "<td>".$row['requirement_id']."</td>";
+														echo "<td>".$row['requirement_type']."</td>";
+														echo "<td>".$row['requirement_sdate']."</td>";
+														echo "<td>".$row['requirement_edate']."</td>";
+														echo "<td>".$row['requirement_assigner']."</td>";
+														echo "<td>".$row['requirement_parent']."</td>";
+														echo "<td>".$row['requirement_summary']."</td>";
+														echo "<td>".$row['requirement_assignee']."</td>";
+														echo "<td>".$row['requirement_version']."</td>";
+														echo "<td><a onClick=\"javascript: return confirm('Do you really want to remove this item?');\" 
+																   href='delete_user.php?requirement_id_TBD=".$row['requirement_id']."'>Delete</a></td>";
+													echo "</tr>";
+												}
+											
+										?>
                                         </tbody>
                                     </table>
                                 </div>
