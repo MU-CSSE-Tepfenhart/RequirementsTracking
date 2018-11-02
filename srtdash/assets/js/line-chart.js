@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*--------------  coin_sales1 start ------------*/
 if ($('#coin_sales1').length) {
     var ctx = document.getElementById("coin_sales1").getContext('2d');
@@ -2259,7 +2258,6 @@ if ($('#salesanalytic').length) {
 }
 //------------echarts2
 
-=======
 /*--------------  coin_sales1 start ------------*/
 if ($('#coin_sales1').length) {
     var ctx = document.getElementById("coin_sales1").getContext('2d');
@@ -4519,6 +4517,4 @@ if ($('#salesanalytic').length) {
     });
 }
 //------------echarts2
-
->>>>>>> master
 /*-------------- 11 line chart amchart end ------------*/

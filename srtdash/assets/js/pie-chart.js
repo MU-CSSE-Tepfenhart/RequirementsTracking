@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*--------------  coin distrubution chart END ------------*/
 if ($('#coin_distribution').length) {
 
@@ -430,7 +429,6 @@ if ($('#seolinechart8').length) {
         }
     });
 }
-=======
 /*--------------  coin distrubution chart END ------------*/
 if ($('#coin_distribution').length) {
 
@@ -862,5 +860,4 @@ if ($('#seolinechart8').length) {
         }
     });
 }
->>>>>>> master
 /*-------------- 7 Pie chart chartjs end ------------*/
