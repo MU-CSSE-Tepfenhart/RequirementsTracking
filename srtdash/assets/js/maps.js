@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* ------------- map amchart 1 start ------------ */
 
 /**
@@ -1811,7 +1810,6 @@ function createCustomMarker(image) {
 
     return holder;
 }
-=======
 /* ------------- map amchart 1 start ------------ */
 
 /**
@@ -3624,5 +3622,4 @@ function createCustomMarker(image) {
 
     return holder;
 }
->>>>>>> master
 /* ------------- map amchart 7 END ------------ */

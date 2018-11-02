@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*--------------  coin_sales4 bar chart start ------------*/
 if ($('#coin_sales4').length) {
     var ctx = document.getElementById("coin_sales4").getContext('2d');
@@ -808,7 +807,6 @@ if ($('#socialads').length) {
         ]
     });
 }
-=======
 /*--------------  coin_sales4 bar chart start ------------*/
 if ($('#coin_sales4').length) {
     var ctx = document.getElementById("coin_sales4").getContext('2d');
@@ -1618,5 +1616,4 @@ if ($('#socialads').length) {
         ]
     });
 }
->>>>>>> master
 /*--------------  bar chart 14 highchart END ------------*/
