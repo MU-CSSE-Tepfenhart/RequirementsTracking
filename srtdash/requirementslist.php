@@ -383,7 +383,7 @@
                                         </thead>
                                         <tbody>
 										<?php
-											include("includes/reqd_connection.php");
+											include("../includes/reqd_connection.php");
 											
 											$display = 1000;
 											if (isset($_GET["page"])) { $page  = $_GET["page"]; } else { $page=1; }; 
