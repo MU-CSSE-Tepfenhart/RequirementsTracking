@@ -1,10 +1,12 @@
 <!doctype html>
 <html class="no-js" lang="en">
-
+<?php
+  include("../../reqd_connection.php")
+?>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>srtdash - SEO Dashboard</title>
+    <title>Dashboard | Reqt</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -41,15 +43,13 @@
                 <div class="row align-items-center">
                     <div class="col-md-3">
                         <div class="logo">
-                            <a href="index.html"><img src="assets/images/icon/logo2.png" alt="logo"></a>
+                            <a href="index.html">Dashboard | Reqt</a>
                         </div>
                     </div>
                     <!-- profile info & task notification -->
                     <div class="col-md-9 clearfix text-right">
                         <div class="d-md-inline-block d-block mr-md-4">
                             <ul class="notification-area">
-                                <li id="full-view"><i class="ti-fullscreen"></i></li>
-                                <li id="full-view-exit"><i class="ti-zoom-out"></i></li>
                                 <li class="dropdown">
                                     <i class="ti-bell dropdown-toggle" data-toggle="dropdown">
                                         <span>2</span>
@@ -195,11 +195,10 @@
                         <div class="clearfix d-md-inline-block d-block">
                             <div class="user-profile m-0">
                                 <img class="avatar user-thumb" src="assets/images/author/avatar.png" alt="avatar">
-                                <h4 class="user-name dropdown-toggle" data-toggle="dropdown">Kumkum Rai <i class="fa fa-angle-down"></i></h4>
+                                <h4 class="user-name dropdown-toggle" data-toggle="dropdown">name goes here<i class="fa fa-angle-down"></i></h4>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Message</a>
-                                    <a class="dropdown-item" href="#">Settings</a>
-                                    <a class="dropdown-item" href="#">Log Out</a>
+                                    <a class="dropdown-item" href="settings.php">Settings</a>
+                                    <a class="dropdown-item" href="login.php" onclick = "logout()">Log Out</a>
                                 </div>
                             </div>
                         </div>
@@ -217,87 +216,24 @@
                             <nav>
                                 <ul id="nav_menu">
                                     <li>
-                                        <a href="javascript:void(0)"><i class="ti-dashboard"></i><span>dashboard</span></a>
-                                        <ul class="submenu">
-                                            <li><a href="index.html">ICO dashboard</a></li>
-                                            <li><a href="index2.html">Ecommerce dashboard</a></li>
-                                            <li><a href="index3.html">SEO dashboard</a></li>
-                                        </ul>
+                                        <a href="index.html"><i class="ti-dashboard"></i><span>dashboard</span></a>
+
                                     </li>
-                                    <li class="active">
-                                        <a href="javascript:void(0)"><i class="ti-layout-sidebar-left"></i><span>Sidebar
-                                                Types</span></a>
+                                    <li>
+                                        <a href="javascript:void(0)"><i class="ti-pie-chart"></i><span>Requirements</span></a>
                                         <ul class="submenu">
-                                            <li><a href="index.html">Left Sidebar</a></li>
-                                            <li class="active"><a href="index3-horizontalmenu.html">Horizontal Sidebar</a></li>
+                                            <li><a href="requirements.php">Requirements</a></li>
+                                            <li><a href="requirementsgrid.php">Reqirements Grid</a></li>
+                                            <li><a href="requirementslist.php">Requirements List</a></li>
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="javascript:void(0)"><i class="ti-pie-chart"></i><span>Charts</span></a>
+                                        <a href="javascript:void(0)"><i class="ti-palette"></i><span>Project</span></a>
                                         <ul class="submenu">
-                                            <li><a href="barchart.html">bar chart</a></li>
-                                            <li><a href="linechart.html">line Chart</a></li>
-                                            <li><a href="piechart.html">pie chart</a></li>
+                                            <li><a href="projectoverview.php">Overview</a></li>
                                         </ul>
                                     </li>
-                                    <li class="mega-menu">
-                                        <a href="javascript:void(0)"><i class="ti-palette"></i><span>UI Features</span></a>
-                                        <ul class="submenu">
-                                            <li><a href="accordion.html">Accordion</a></li>
-                                            <li><a href="alert.html">Alert</a></li>
-                                            <li><a href="badge.html">Badge</a></li>
-                                            <li><a href="button.html">Button</a></li>
-                                            <li><a href="button-group.html">Button Group</a></li>
-                                            <li><a href="cards.html">Cards</a></li>
-                                            <li><a href="dropdown.html">Dropdown</a></li>
-                                            <li><a href="list-group.html">List Group</a></li>
-                                            <li><a href="media-object.html">Media Object</a></li>
-                                            <li><a href="modal.html">Modal</a></li>
-                                            <li><a href="pagination.html">Pagination</a></li>
-                                            <li><a href="popovers.html">Popover</a></li>
-                                            <li><a href="progressbar.html">Progressbar</a></li>
-                                            <li><a href="tab.html">Tab</a></li>
-                                            <li><a href="typography.html">Typography</a></li>
-                                            <li><a href="form.html">Form</a></li>
-                                            <li><a href="grid.html">grid system</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="mega-menu">
-                                        <a href="javascript:void(0)"><i class="ti-layers-alt"></i> <span>Pages</span></a>
-                                        <ul class="submenu">
-                                            <li><a href="login.html">Login</a></li>
-                                            <li><a href="login2.html">Login 2</a></li>
-                                            <li><a href="login3.html">Login 3</a></li>
-                                            <li><a href="register.html">Register</a></li>
-                                            <li><a href="register2.html">Register 2</a></li>
-                                            <li><a href="register3.html">Register 3</a></li>
-                                            <li><a href="register4.html">Register 4</a></li>
-                                            <li><a href="screenlock.html">Lock Screen</a></li>
-                                            <li><a href="screenlock2.html">Lock Screen 2</a></li>
-                                            <li><a href="reset-pass.html">reset password</a></li>
-                                            <li><a href="pricing.html">Pricing</a></li>
-                                            <li><a href="404.html">Error 404</a></li>
-                                            <li><a href="500.html">Error 500</a></li>
-                                            <li><a href="invoice.html"><i class="ti-receipt"></i> <span>Invoice Summary</span></a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)"><i class="ti-slice"></i><span>icons</span></a>
-                                        <ul class="submenu">
-                                            <li><a href="fontawesome.html">fontawesome icons</a></li>
-                                            <li><a href="themify.html">themify icons</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)"><i class="fa fa-table"></i>
-                                            <span>Tables</span></a>
-                                        <ul class="submenu">
-                                            <li><a href="table-basic.html">basic table</a></li>
-                                            <li><a href="table-layout.html">table layout</a></li>
-                                            <li><a href="datatable.html">datatable</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="maps.html"><i class="ti-map-alt"></i> <span>maps</span></a></li>
+                                    <li><a href="profile.php"><i class="ti-map-alt"></i> <span>Profile</span></a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -325,23 +261,24 @@
                 <div class="row">
                     <!-- seo fact area start -->
                     <div class="col-lg-8">
+                      <h4 style = "margin-top: 20px">Projects</h4>
                         <div class="row">
-                            <div class="col-md-6 mt-5 mb-3">
+                            <div class="col-md-6 mb-3" style = "margin-top: 1rem!important;">
                                 <div class="card">
                                     <div class="seo-fact sbg1">
                                         <div class="p-4 d-flex justify-content-between align-items-center">
-                                            <div class="seofct-icon"><i class="ti-thumb-up"></i> Likes</div>
+                                            <div class="seofct-icon"><i class="ti-thumb-up"></i> Project 1</div>
                                             <h2>2,315</h2>
                                         </div>
                                         <canvas id="seolinechart1" height="50"></canvas>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 mt-md-5 mb-3">
+                            <div class="col-md-6 mb-3" style = "margin-top: 1rem!important;">
                                 <div class="card">
                                     <div class="seo-fact sbg2">
                                         <div class="p-4 d-flex justify-content-between align-items-center">
-                                            <div class="seofct-icon"><i class="ti-share"></i> Share</div>
+                                            <div class="seofct-icon"><i class="ti-share"></i>Project 2</div>
                                             <h2>3,984</h2>
                                         </div>
                                         <canvas id="seolinechart2" height="50"></canvas>
@@ -352,7 +289,7 @@
                                 <div class="card">
                                     <div class="seo-fact sbg3">
                                         <div class="p-4 d-flex justify-content-between align-items-center">
-                                            <div class="seofct-icon">Impressions</div>
+                                            <div class="seofct-icon">Project 3</div>
                                             <canvas id="seolinechart3" height="60"></canvas>
                                         </div>
                                     </div>
@@ -362,57 +299,118 @@
                                 <div class="card">
                                     <div class="seo-fact sbg4">
                                         <div class="p-4 d-flex justify-content-between align-items-center">
-                                            <div class="seofct-icon">New Users</div>
+                                            <div class="seofct-icon">Project 4</div>
                                             <canvas id="seolinechart4" height="60"></canvas>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div>
+                            <div class="col-lg-12" style = "padding-left: 0">
+                              <div class = "row">
+                                <!-- Progress Table start -->
+                                <div class="col-lg-12" style = "padding-left: 0">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h4 class="header-title" style = "font-size: 1.5rem">My Tasks</h4>
+                                            <div class="single-table">
+                                                <div class="table-responsive">
+                                                    <table class="table table-hover progress-table text-center">
+                                                        <thead class="text-uppercase">
+                                                            <tr>
+                                                                <th scope="col">ID</th>
+                                                                <th scope="col">task</th>
+                                                                <th scope="col">Deadline</th>
+                                                                <th scope="col">Progress</th>
+                                                                <th scope="col">status</th>
+                                                                <th scope="col">action</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row">1</th>
+                                                                <td>Mark</td>
+                                                                <td>09 / 07 / 2018</td>
+                                                                <td>
+                                                                    <div class="progress" style="height: 8px;">
+                                                                        <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </td>
+                                                                <td><span class="status-p bg-primary">pending</span></td>
+                                                                <td>
+                                                                    <ul class="d-flex justify-content-center">
+                                                                        <li class="mr-3"><a href="#" class="text-secondary"><i class="fa fa-edit"></i></a></li>
+                                                                        <li><a href="#" class="text-danger"><i class="ti-trash"></i></a></li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">2</th>
+                                                                <td>Mark</td>
+                                                                <td>09 / 07 / 2018</td>
+                                                                <td>
+                                                                    <div class="progress" style="height: 8px;">
+                                                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </td>
+                                                                <td><span class="status-p bg-warning">pending</span></td>
+                                                                <td>
+                                                                    <ul class="d-flex justify-content-center">
+                                                                        <li class="mr-3"><a href="#" class="text-secondary"><i class="fa fa-edit"></i></a></li>
+                                                                        <li><a href="#" class="text-danger"><i class="ti-trash"></i></a></li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">3</th>
+                                                                <td>Mark</td>
+                                                                <td>09 / 07 / 2018</td>
+                                                                <td>
+                                                                    <div class="progress" style="height: 8px;">
+                                                                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </td>
+                                                                <td><span class="status-p bg-success">complate</span></td>
+                                                                <td>
+                                                                    <ul class="d-flex justify-content-center">
+                                                                        <li class="mr-3"><a href="#" class="text-secondary"><i class="fa fa-edit"></i></a></li>
+                                                                        <li><a href="#" class="text-danger"><i class="ti-trash"></i></a></li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">4</th>
+                                                                <td>Mark</td>
+                                                                <td>09 / 07 / 2018</td>
+                                                                <td>
+                                                                    <div class="progress" style="height: 8px;">
+                                                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </td>
+                                                                <td><span class="status-p bg-warning">panding</span></td>
+                                                                <td>
+                                                                    <ul class="d-flex justify-content-center">
+                                                                        <li class="mr-3"><a href="#" class="text-secondary"><i class="fa fa-edit"></i></a></li>
+                                                                        <li><a href="#" class="text-danger"><i class="ti-trash"></i></a></li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Progress Table end -->
+                              </div>
+                            </div>
+                        </div>
                     </div>
                     <!-- seo fact area end -->
-                    <!-- Social Campain area start -->
-                    <div class="col-lg-4 mt-5">
-                        <div class="card">
-                            <div class="card-body pb-0">
-                                <h4 class="header-title">Social ads Campain</h4>
-                                <div id="socialads" style="height: 245px;"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Social Campain area end -->
-                    <!-- Statistics area start -->
-                    <div class="col-lg-8 mt-5">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="header-title">User Statistics</h4>
-                                <div id="user-statistics"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Statistics area end -->
-                    <!-- Advertising area start -->
-                    <div class="col-lg-4 mt-5">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="header-title">Advertising & Marketing</h4>
-                                <canvas id="seolinechart8" height="233"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Advertising area end -->
-                    <!-- sales area start -->
-                    <div class="col-xl-8 col-lg-8 mt-5">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="header-title">Sales</h4>
-                                <div id="salesanalytic"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- sales area end -->
                     <!-- timeline area start -->
-                    <div class="col-xl-4 col-lg-4 mt-5">
+                    <div class="col-lg-4 mt-5">
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="header-title">Timeline</h4>
@@ -475,57 +473,7 @@
                         </div>
                     </div>
                     <!-- timeline area end -->
-                    <!-- map area start -->
-                    <div class="col-lg-5 mt-5">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="header-title">Marketing Area</h4>
-                                <div id="seomap"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- map area end -->
-                    <!-- testimonial area start -->
-                    <div class="col-lg-7 mt-5">
-                        <div class="card">
-                            <div class="card-body bg1">
-                                <h4 class="header-title text-white">Client Feadback</h4>
-                                <div class="testimonial-carousel owl-carousel">
-                                    <div class="tst-item">
-                                        <div class="tstu-img">
-                                            <img src="assets/images/team/team-author1.jpg" alt="author image">
-                                        </div>
-                                        <div class="tstu-content">
-                                            <h4 class="tstu-name">Abel Franecki</h4>
-                                            <span class="profsn">Designer</span>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae laborum ut nihil numquam a aliquam alias necessitatibus ipsa soluta quam!</p>
-                                        </div>
-                                    </div>
-                                    <div class="tst-item">
-                                        <div class="tstu-img">
-                                            <img src="assets/images/team/team-author2.jpg" alt="author image">
-                                        </div>
-                                        <div class="tstu-content">
-                                            <h4 class="tstu-name">Abel Franecki</h4>
-                                            <span class="profsn">Designer</span>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae laborum ut nihil numquam a aliquam alias necessitatibus ipsa soluta quam!</p>
-                                        </div>
-                                    </div>
-                                    <div class="tst-item">
-                                        <div class="tstu-img">
-                                            <img src="assets/images/team/team-author3.jpg" alt="author image">
-                                        </div>
-                                        <div class="tstu-content">
-                                            <h4 class="tstu-name">Abel Franecki</h4>
-                                            <span class="profsn">Designer</span>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae laborum ut nihil numquam a aliquam alias necessitatibus ipsa soluta quam!</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- testimonial area end -->
+
                 </div>
             </div>
         </div>
