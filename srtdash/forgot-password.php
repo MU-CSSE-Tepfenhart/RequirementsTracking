@@ -1,6 +1,8 @@
 <!doctype html>
 <html class="no-js" lang="en">
-
+<?php
+  include("../../reqd_connection.php")
+?>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -33,7 +35,7 @@
         <div class="loader"></div>
     </div>
     <!-- preloader area end -->
-    
+
     <!-- login area start -->
     <div class="login-area">
         <div class="container">
@@ -68,7 +70,7 @@
     <script src="assets/js/metisMenu.min.js"></script>
     <script src="assets/js/jquery.slimscroll.min.js"></script>
     <script src="assets/js/jquery.slicknav.min.js"></script>
-    
+
     <!-- others plugins -->
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/scripts.js"></script>

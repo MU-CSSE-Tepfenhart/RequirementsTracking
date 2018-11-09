@@ -1,6 +1,8 @@
 <!doctype html>
 <html class="no-js" lang="en">
-
+<?php
+  include("../../reqd_connection.php")
+?>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -30,7 +32,7 @@
 </head>
 
 <body>
-	
+
     <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -384,15 +386,15 @@
                                         <tbody>
 										<?php
 											include("../includes/reqd_connection.php");
-											
+
 											$display = 1000;
-											if (isset($_GET["page"])) { $page  = $_GET["page"]; } else { $page=1; }; 
+											if (isset($_GET["page"])) { $page  = $_GET["page"]; } else { $page=1; };
 											$start_from = ($page-1) * $display;
 											$q = "SELECT * FROM requirements ORDER BY requirement_id ASC LIMIT ". $start_from.", ". $display;
-											
+
 											$r = $conn->query($q) or die($conn->error);
 												while (($row = $r->fetch_assoc()) !== null){
-													
+
 													echo "<tr>";
 														echo "<td>".$row['requirement_id']."</td>";
 														echo "<td>".$row['requirement_type']."</td>";
@@ -403,11 +405,11 @@
 														echo "<td>".$row['requirement_summary']."</td>";
 														echo "<td>".$row['requirement_assignee']."</td>";
 														echo "<td>".$row['requirement_version']."</td>";
-														echo "<td><a onClick=\"javascript: return confirm('Do you really want to remove this item?');\" 
+														echo "<td><a onClick=\"javascript: return confirm('Do you really want to remove this item?');\"
 																   href='delete_user.php?requirement_id_TBD=".$row['requirement_id']."'>Delete</a></td>";
 													echo "</tr>";
 												}
-											
+
 										?>
                                         </tbody>
                                     </table>

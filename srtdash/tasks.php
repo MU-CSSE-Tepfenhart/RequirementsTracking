@@ -1,6 +1,8 @@
 ﻿<!doctype html>
 <html class="no-js" lang="en">
-
+<?php
+  include("../../reqd_connection.php")
+?>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -41,9 +43,9 @@
     <!-- page container area start -->
     <div class="page-container">
 
-<!-- main content area start -->        
+<!-- main content area start -->
 	<div class="main-content">
-            
+
 	  <!-- main wrapper start -->
     <div class="horizontal-main-wrapper">
         <!-- main header area start -->
@@ -264,7 +266,7 @@
             </div>
         </div>
         <!-- header area end -->
-        <!-- page title area end -->	
+        <!-- page title area end -->
 
             </div>
 			<!------ Include the above in your HEAD tag ---------->
@@ -442,11 +444,11 @@
 				</div>
 			</div>
 		</section>
-		
+
 	</div>
 </div>
             </div>
-	
+
         <!-- footer area start-->
         <footer>
             <div class="footer-area">

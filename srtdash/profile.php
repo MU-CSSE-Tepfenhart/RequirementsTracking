@@ -1,6 +1,8 @@
 ﻿<!doctype html>
 <html class="no-js" lang="en">
-
+<?php
+  include("../../reqd_connection.php")
+?>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -35,7 +37,7 @@
     <!-- preloader area end -->
     <!-- page container area start -->
     <div class="page-container">
-        
+
         <!-- main content area start -->
         <div class="main-content">
 
@@ -259,7 +261,7 @@
             </div>
         </div>
         <!-- header area end -->
-        <!-- page title area end -->	  
+        <!-- page title area end -->
 
             <div class="main-content-inner">
                 <div class="row">
