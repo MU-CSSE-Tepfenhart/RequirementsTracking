@@ -1,10 +1,12 @@
 <!doctype html>
 <html class="no-js" lang="en">
-
+<?php
+  include("../../reqd_connection.php")
+?>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>srtdash - Ecommerce Dashboard</title>
+    <title>Tab - srtdash</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -46,12 +48,12 @@
                 <div class="menu-inner">
                     <nav>
                         <ul class="metismenu" id="menu">
-                            <li class="active">
+                            <li>
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-dashboard"></i><span>dashboard</span></a>
                                 <ul class="collapse">
-                                    <li><a href="index.html">SEO dashboard</a></li>
-                                    <li class="active"><a href="index2.html">Ecommerce dashboard</a></li>
-                                    <li><a href="index3.html">ICO dashboard</a></li>
+                                    <li><a href="index.html">ICO dashboard</a></li>
+                                    <li><a href="index2.html">Ecommerce dashboard</a></li>
+                                    <li><a href="index3.html">SEO dashboard</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -71,7 +73,7 @@
                                     <li><a href="piechart.html">pie chart</a></li>
                                 </ul>
                             </li>
-                            <li>
+                            <li class="active">
                                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-palette"></i><span>UI Features</span></a>
                                 <ul class="collapse">
                                     <li><a href="accordion.html">Accordion</a></li>
@@ -87,7 +89,7 @@
                                     <li><a href="pagination.html">Pagination</a></li>
                                     <li><a href="popovers.html">Popover</a></li>
                                     <li><a href="progressbar.html">Progressbar</a></li>
-                                    <li><a href="tab.html">Tab</a></li>
+                                    <li class="active"><a href="tab.html">Tab</a></li>
                                     <li><a href="typography.html">Typography</a></li>
                                     <li><a href="form.html">Form</a></li>
                                     <li><a href="grid.html">grid system</a></li>
@@ -335,7 +337,7 @@
                             <h4 class="page-title pull-left">Dashboard</h4>
                             <ul class="breadcrumbs pull-left">
                                 <li><a href="index.html">Home</a></li>
-                                <li><span>Dashboard</span></li>
+                                <li><span>Tab</span></li>
                             </ul>
                         </div>
                     </div>
@@ -354,293 +356,148 @@
             </div>
             <!-- page title area end -->
             <div class="main-content-inner">
-                <!-- sales report area start -->
-                <div class="sales-report-area sales-style-two">
-                    <div class="row">
-                        <div class="col-xl-3 col-ml-3 col-md-6 mt-5">
-                            <div class="single-report">
-                                <div class="s-sale-inner pt--30 mb-3">
-                                    <div class="s-report-title d-flex justify-content-between">
-                                        <h4 class="header-title mb-0">Product Sold</h4>
-                                        <select class="custome-select border-0 pr-3">
-                                            <option selected="">Last 7 Days</option>
-                                            <option value="0">Last 7 Days</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <canvas id="coin_sales4" height="100"></canvas>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-ml-3 col-md-6 mt-5">
-                            <div class="single-report">
-                                <div class="s-sale-inner pt--30 mb-3">
-                                    <div class="s-report-title d-flex justify-content-between">
-                                        <h4 class="header-title mb-0">Gross Profit</h4>
-                                        <select class="custome-select border-0 pr-3">
-                                            <option selected="">Last 7 Days</option>
-                                            <option value="0">Last 7 Days</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <canvas id="coin_sales5" height="100"></canvas>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-ml-3 col-md-6  mt-5">
-                            <div class="single-report">
-                                <div class="s-sale-inner pt--30 mb-3">
-                                    <div class="s-report-title d-flex justify-content-between">
-                                        <h4 class="header-title mb-0">Orders</h4>
-                                        <select class="custome-select border-0 pr-3">
-                                            <option selected="">Last 7 Days</option>
-                                            <option value="0">Last 7 Days</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <canvas id="coin_sales6" height="100"></canvas>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-ml-3 col-md-6 mt-5">
-                            <div class="single-report">
-                                <div class="s-sale-inner pt--30 mb-3">
-                                    <div class="s-report-title d-flex justify-content-between">
-                                        <h4 class="header-title mb-0">New Coustomers</h4>
-                                        <select class="custome-select border-0 pr-3">
-                                            <option selected="">Last 7 Days</option>
-                                            <option value="0">Last 7 Days</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <canvas id="coin_sales7" height="100"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- sales report area end -->
-                <!-- visitor graph area start -->
-                <div class="card mt-5">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between mb-5">
-                            <h4 class="header-title mb-0">Visitor Graph</h4>
-                            <select class="custome-select border-0 pr-3">
-                                <option selected="">Last 7 Days</option>
-                                <option value="0">Last 7 Days</option>
-                            </select>
-                        </div>
-                        <div id="visitor_graph"></div>
-                    </div>
-                </div>
-                <!-- visitor graph area end -->
-                <!-- order list area start -->
-                <div class="card mt-5">
-                    <div class="card-body">
-                        <h4 class="header-title">Todays Order List</h4>
-                        <div class="table-responsive">
-                            <table class="dbkit-table">
-                                <tbody>
-                                    <tr class="heading-td">
-                                        <td>Product Name</td>
-                                        <td>Product Code</td>
-                                        <td>Order Status</td>
-                                        <td>Client Number</td>
-                                        <td>Zip Code</td>
-                                        <td>View Order</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Ladis Sunglass</td>
-                                        <td>#894750374</td>
-                                        <td><span class="pending_dot">Pending</span></td>
-                                        <td>01976 74 92 00</td>
-                                        <td>9241</td>
-                                        <td>View Order</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Ladis Sunglass</td>
-                                        <td>#894750374</td>
-                                        <td><span class="shipment_dot">Shipment</span></td>
-                                        <td>01976 74 92 00</td>
-                                        <td>9241</td>
-                                        <td>View Order</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Ladis Sunglass</td>
-                                        <td>#894750374</td>
-                                        <td><span class="pending_dot">Pending</span></td>
-                                        <td>01976 74 92 00</td>
-                                        <td>9241</td>
-                                        <td>View Order</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Ladis Sunglass</td>
-                                        <td>#894750374</td>
-                                        <td><span class="confirmed _dot">Confirmed </span></td>
-                                        <td>01976 74 92 00</td>
-                                        <td>9241</td>
-                                        <td>View Order</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Ladis Sunglass</td>
-                                        <td>#894750374</td>
-                                        <td><span class="pending_dot">Pending</span></td>
-                                        <td>01976 74 92 00</td>
-                                        <td>9241</td>
-                                        <td>View Order</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="pagination_area pull-right mt-5">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
-                                <li><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- order list area end -->
                 <div class="row">
-                    <!-- product sold area start -->
-                    <div class="col-xl-8 col-lg-7 col-md-12 mt-5">
+<<<<<<< HEAD
+                    <!-- anchor tab start -->
+                    <div class="col-lg-6 mt-5">
+                        <div class="card" style="width: 85em;">
+                            <div class="card-body">
+                                <nav>
+                                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                        <a class="nav-item nav-link active" id="nav-po-tab" data-toggle="tab" href="#nav-po" role="tab" aria-controls="nav-po" aria-selected="true">Project Owner</a>
+                                        <a class="nav-item nav-link" id="nav-dev-tab" data-toggle="tab" href="#nav-dev" role="tab" aria-controls="nav-dev" aria-selected="false">Developer</a>
+                                        <a class="nav-item nav-link" id="nav-stakeholder-tab" data-toggle="tab" href="#nav-stakeholder" role="tab" aria-controls="nav-stakeholder" aria-selected="false">Stakeholder</a>
+                                    </div>
+                                </nav>
+                                <div class="tab-content mt-3" id="nav-tabContent">
+                                    <div class="tab-pane fade show active" id="nav-po" role="tabpanel" aria-labelledby="nav-po-tab">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit nostrum porro architecto saepe iste adipisci praesentium, voluptates unde natus sit optio, incidunt est, nulla explicabo asperiores laborum hic aliquam quos consequuntur? Blanditiis quaerat soluta non accusamus dolores doloremque, quos architecto libero vero magnam possimus modi fugit? Porro laboriosam pariatur magnam.</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-dev" role="tabpanel" aria-labelledby="nav-dev-tab">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit nostrum porro architecto saepe iste adipisci praesentium, voluptates unde natus sit optio, incidunt est, nulla explicabo asperiores laborum hic aliquam quos consequuntur? Blanditiis quaerat soluta non accusamus dolores doloremque, quos architecto libero vero magnam possimus modi fugit? Porro laboriosam pariatur magnam.</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-stakeholder" role="tabpanel" aria-labelledby="nav-stakeholder-tab">
+=======
+                    <!-- nav tab start -->
+                    <div class="col-lg-6 mt-5">
                         <div class="card">
                             <div class="card-body">
-                                <div class="d-flex justify-content-between mb-4">
-                                    <h4 class="header-title mb-0">Product Slod</h4>
-                                    <select class="custome-select border-0 pr-3">
-                                        <option selected="">Today</option>
-                                        <option value="0">Last 7 Days</option>
-                                    </select>
-                                </div>
-                                <div class="table-responsive">
-                                    <table class="dbkit-table">
-                                        <tbody>
-                                            <tr class="heading-td">
-                                                <td>Product Name</td>
-                                                <td>Revenue</td>
-                                                <td>Sold</td>
-                                                <td>Discount</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Ladis Sunglass</td>
-                                                <td>$56</td>
-                                                <td>$160</td>
-                                                <td>$20</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Ladis Sunglass</td>
-                                                <td>$26</td>
-                                                <td>$500</td>
-                                                <td>$20</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Ladis Sunglass</td>
-                                                <td>$26</td>
-                                                <td>$500</td>
-                                                <td>$20</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Ladis Sunglass</td>
-                                                <td>$56</td>
-                                                <td>$250</td>
-                                                <td>$10</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Ladis Sunglass</td>
-                                                <td>$56</td>
-                                                <td>$125</td>
-                                                <td>$50</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="pagination_area pull-right mt-5">
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
-                                        <li><a href="#">1</a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- product sold area end -->
-                    <!-- team member area start -->
-                    <div class="col-xl-4 col-lg-5 col-md-12 mt-5">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-sm-flex flex-wrap justify-content-between mb-4 align-items-center">
-                                    <h4 class="header-title mb-0">Team Member</h4>
-                                    <form class="team-search">
-                                        <input type="text" name="search" placeholder="Search Here">
-                                    </form>
-                                </div>
-                                <div class="member-box">
-                                    <div class="s-member">
-                                        <div class="media align-items-center">
-                                            <img src="assets/images/team/team-author1.jpg" class="d-block ui-w-30 rounded-circle" alt="">
-                                            <div class="media-body ml-5">
-                                                <p>Amir Hamza</p><span>Manager</span>
-                                            </div>
-                                            <div class="tm-social">
-                                                <a href="#"><i class="fa fa-phone"></i></a>
-                                                <a href="#"><i class="fa fa-envelope"></i></a>
-                                            </div>
-                                        </div>
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content mt-3" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta soluta doloribus, ullam, ut obcaecati laboriosam eos, officia dolores voluptatum quas impedit placeat cumque animi quos odio quibusdam voluptatibus magnam minima facilis necessitatibus libero! Error velit veritatis veniam ipsa? Reiciendis quas qui neque atque repudiandae quidem incidunt, a consectetur ipsam impedit.</p>
                                     </div>
-                                    <div class="s-member">
-                                        <div class="media align-items-center">
-                                            <img src="assets/images/team/team-author2.jpg" class="d-block ui-w-30 rounded-circle" alt="">
-                                            <div class="media-body ml-5">
-                                                <p>Anamul Kabir</p><span>UI design</span>
-                                            </div>
-                                            <div class="tm-social">
-                                                <a href="#"><i class="fa fa-phone"></i></a>
-                                                <a href="#"><i class="fa fa-envelope"></i></a>
-                                            </div>
-                                        </div>
+                                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta soluta doloribus, ullam, ut obcaecati laboriosam eos, officia dolores voluptatum quas impedit placeat cumque animi quos odio quibusdam voluptatibus magnam minima facilis necessitatibus libero! Error velit veritatis veniam ipsa? Reiciendis quas qui neque atque repudiandae quidem incidunt, a consectetur ipsam impedit.</p>
                                     </div>
-                                    <div class="s-member">
-                                        <div class="media align-items-center">
-                                            <img src="assets/images/team/team-author3.jpg" class="d-block ui-w-30 rounded-circle" alt="">
-                                            <div class="media-body ml-5">
-                                                <p>Animesh Mondol</p><span>UI design</span>
-                                            </div>
-                                            <div class="tm-social">
-                                                <a href="#"><i class="fa fa-phone"></i></a>
-                                                <a href="#"><i class="fa fa-envelope"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="s-member">
-                                        <div class="media align-items-center">
-                                            <img src="assets/images/team/team-author4.jpg" class="d-block ui-w-30 rounded-circle" alt="">
-                                            <div class="media-body ml-5">
-                                                <p>Faruk Hasan</p><span>UI design</span>
-                                            </div>
-                                            <div class="tm-social">
-                                                <a href="#"><i class="fa fa-phone"></i></a>
-                                                <a href="#"><i class="fa fa-envelope"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="s-member">
-                                        <div class="media align-items-center">
-                                            <img src="assets/images/team/team-author5.jpg" class="d-block ui-w-30 rounded-circle" alt="">
-                                            <div class="media-body ml-5">
-                                                <p>Sagor Chandra</p><span>Motion Designer</span>
-                                            </div>
-                                            <div class="tm-social">
-                                                <a href="#"><i class="fa fa-phone"></i></a>
-                                                <a href="#"><i class="fa fa-envelope"></i></a>
-                                            </div>
-                                        </div>
+                                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta soluta doloribus, ullam, ut obcaecati laboriosam eos, officia dolores voluptatum quas impedit placeat cumque animi quos odio quibusdam voluptatibus magnam minima facilis necessitatibus libero! Error velit veritatis veniam ipsa? Reiciendis quas qui neque atque repudiandae quidem incidunt, a consectetur ipsam impedit.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- team member area end -->
+                    <!-- nav tab end -->
+                    <!-- anchor tab start -->
+                    <div class="col-lg-6 mt-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <nav>
+                                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
+                                        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
+                                        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
+                                    </div>
+                                </nav>
+                                <div class="tab-content mt-3" id="nav-tabContent">
+                                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit nostrum porro architecto saepe iste adipisci praesentium, voluptates unde natus sit optio, incidunt est, nulla explicabo asperiores laborum hic aliquam quos consequuntur? Blanditiis quaerat soluta non accusamus dolores doloremque, quos architecto libero vero magnam possimus modi fugit? Porro laboriosam pariatur magnam.</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit nostrum porro architecto saepe iste adipisci praesentium, voluptates unde natus sit optio, incidunt est, nulla explicabo asperiores laborum hic aliquam quos consequuntur? Blanditiis quaerat soluta non accusamus dolores doloremque, quos architecto libero vero magnam possimus modi fugit? Porro laboriosam pariatur magnam.</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+>>>>>>> master
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit nostrum porro architecto saepe iste adipisci praesentium, voluptates unde natus sit optio, incidunt est, nulla explicabo asperiores laborum hic aliquam quos consequuntur? Blanditiis quaerat soluta non accusamus dolores doloremque, quos architecto libero vero magnam possimus modi fugit? Porro laboriosam pariatur magnam.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- anchor tab end -->
+<<<<<<< HEAD
+=======
+                    <!-- tab start -->
+                    <div class="col-lg-6 mt-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="pills-tabContent">
+                                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum ratione officia libero maiores, explicabo cumque dolorem quasi rerum molestiae. Ex ut tempora odit voluptatem, libero culpa nostrum dolores enim velit magnam repellendus! Porro repudiandae mollitia odit eveniet molestias consequuntur deleniti quisquam ducimus quidem autem? Error culpa nostrum, nemo quo quisquam illo architecto id nihil pariatur esse recusandae alias quaerat voluptates iure consequuntur repellat cupiditate perferendis iste praesentium. Suscipit, molestias consequatur.</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum ratione officia libero maiores, explicabo cumque dolorem quasi rerum molestiae. Ex ut tempora odit voluptatem, libero culpa nostrum dolores enim velit magnam repellendus! Porro repudiandae mollitia odit eveniet molestias consequuntur deleniti quisquam ducimus quidem autem? Error culpa nostrum, nemo quo quisquam illo architecto id nihil pariatur esse recusandae alias quaerat voluptates iure consequuntur repellat cupiditate perferendis iste praesentium. Suscipit, molestias consequatur.</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum ratione officia libero maiores, explicabo cumque dolorem quasi rerum molestiae. Ex ut tempora odit voluptatem, libero culpa nostrum dolores enim velit magnam repellendus! Porro repudiandae mollitia odit eveniet molestias consequuntur deleniti quisquam ducimus quidem autem? Error culpa nostrum, nemo quo quisquam illo architecto id nihil pariatur esse recusandae alias quaerat voluptates iure consequuntur repellat cupiditate perferendis iste praesentium. Suscipit, molestias consequatur.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tab end -->
+                    <!-- left align tab start -->
+                    <div class="col-lg-6 mt-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-md-flex">
+                                    <div class="nav flex-column nav-pills mr-4 mb-3 mb-sm-0" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                        <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
+                                        <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+                                        <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+                                        <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+                                    </div>
+                                    <div class="tab-content" id="v-pills-tabContent">
+                                        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat blanditiis eaque ab qui accusamus laudantium perspiciatis sint quibusdam at eius consequatur quos possimus aspernatur debitis deleniti sed odit provident repudiandae suscipit officiis, tempora voluptas, excepturi perferendis. Quasi delectus tempora temporibus ipsa soluta mollitia, doloremque corrupti labore, quae voluptatem obcaecati consequuntur ad ipsum fugit impedit cum. Facere, ea? Eveniet quisquam ratione voluptate rerum tempora, consectetur assumenda. Porro temporibus suscipit corporis nulla?</p>
+                                        </div>
+                                        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat blanditiis eaque ab qui accusamus laudantium perspiciatis sint quibusdam at eius consequatur quos possimus aspernatur debitis deleniti sed odit provident repudiandae suscipit officiis, tempora voluptas, excepturi perferendis. Quasi delectus tempora temporibus ipsa soluta mollitia, doloremque corrupti labore, quae voluptatem obcaecati consequuntur ad ipsum fugit impedit cum. Facere, ea? Eveniet quisquam ratione voluptate rerum tempora, consectetur assumenda. Porro temporibus suscipit corporis nulla?</p>
+                                        </div>
+                                        <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat blanditiis eaque ab qui accusamus laudantium perspiciatis sint quibusdam at eius consequatur quos possimus aspernatur debitis deleniti sed odit provident repudiandae suscipit officiis, tempora voluptas, excepturi perferendis. Quasi delectus tempora temporibus ipsa soluta mollitia, doloremque corrupti labore, quae voluptatem obcaecati consequuntur ad ipsum fugit impedit cum. Facere, ea? Eveniet quisquam ratione voluptate rerum tempora, consectetur assumenda. Porro temporibus suscipit corporis nulla?</p>
+                                        </div>
+                                        <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat blanditiis eaque ab qui accusamus laudantium perspiciatis sint quibusdam at eius consequatur quos possimus aspernatur debitis deleniti sed odit provident repudiandae suscipit officiis, tempora voluptas, excepturi perferendis. Quasi delectus tempora temporibus ipsa soluta mollitia, doloremque corrupti labore, quae voluptatem obcaecati consequuntur ad ipsum fugit impedit cum. Facere, ea? Eveniet quisquam ratione voluptate rerum tempora, consectetur assumenda. Porro temporibus suscipit corporis nulla?</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- left align tab end -->
+>>>>>>> master
                 </div>
             </div>
         </div>
@@ -842,22 +699,6 @@
     <script src="assets/js/jquery.slimscroll.min.js"></script>
     <script src="assets/js/jquery.slicknav.min.js"></script>
 
-    <!-- start chart js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
-    <!-- start highcharts js -->
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <!-- start zingchart js -->
-    <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
-    <script>
-    zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
-    ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "ee6b7db5b51705a13dc2339db3edaf6d"];
-    </script>
-    <!-- all line chart activation -->
-    <script src="assets/js/line-chart.js"></script>
-    <!-- all bar chart activation -->
-    <script src="assets/js/bar-chart.js"></script>
-    <!-- all pie chart -->
-    <script src="assets/js/pie-chart.js"></script>
     <!-- others plugins -->
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/scripts.js"></script>

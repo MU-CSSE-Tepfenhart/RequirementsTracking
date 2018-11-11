@@ -1,10 +1,12 @@
-﻿<!doctype html>
+<!doctype html>
 <html class="no-js" lang="en">
-
+<?php
+  include("../../reqd_connection.php")
+?>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Profile - Reqd</title>
+    <title>Dashboard | Reqt</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -24,7 +26,7 @@
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 
-<body>
+<body class="body-bg">
     <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -33,13 +35,7 @@
         <div class="loader"></div>
     </div>
     <!-- preloader area end -->
-    <!-- page container area start -->
-    <div class="page-container">
-        
-        <!-- main content area start -->
-        <div class="main-content">
-
-	  <!-- main wrapper start -->
+    <!-- main wrapper start -->
     <div class="horizontal-main-wrapper">
         <!-- main header area start -->
         <div class="mainheader-area">
@@ -259,90 +255,225 @@
             </div>
         </div>
         <!-- header area end -->
-        <!-- page title area end -->	  
-
-            <div class="main-content-inner">
+        <!-- page title area end -->
+        <div class="main-content-inner">
+            <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 col-ml-12">
+                    <!-- seo fact area start -->
+                    <div class="col-lg-8">
+                      <h4 style = "margin-top: 20px">Projects</h4>
                         <div class="row">
-                            <!-- basic form start -->
-                            <div class="col-12 mt-5">
+                            <div class="col-md-6 mb-3" style = "margin-top: 1rem!important;">
                                 <div class="card">
-                                    <div class="card-body">
-                                        <h4 class="header-title">Personal Profile</h4>
-                                        <form>
-                                            <div class="form-group">
-                                                <label for="first-name-input" class="col-form-label">First Name</label>
-                                                <input class="form-control" type="text" value="Carlos" id="first-name-input">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="last-name-input" class="col-form-label">Last Name</label>
-                                                <input class="form-control" type="text" value="Rath" id="last-name-input">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="company-input" class="col-form-label">Company</label>
-                                                <input class="form-control" type="text" value="Monmouth University" id="company-input">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="position-input" class="col-form-label">Position</label>
-                                                <input class="form-control" type="text" value="Associate" id="position-input">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="email-input" class="col-form-label">Work Email</label>
-                                                <input class="form-control" type="email" value="crath@gmail.com" id="email-input">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="work-tel-input" class="col-form-label">Work Telephone</label>
-                                                <input class="form-control" type="text" value="555-555-5555" id="work-tel-input">
-                                            </div>
-                                            <button type="submit" class="btn btn-primary mt-4 pr-4 pl-4">Submit</button>
-                                        </form>
+                                    <div class="seo-fact sbg1">
+                                        <div class="p-4 d-flex justify-content-between align-items-center">
+                                            <div class="seofct-icon"><i class="ti-thumb-up"></i> Project 1</div>
+                                            <h2>2,315</h2>
+                                        </div>
+                                        <canvas id="seolinechart1" height="50"></canvas>
                                     </div>
                                 </div>
                             </div>
-                            <!-- basic form end -->
-                            <!-- Radios start -->
-                            <div class="col-12 mt-5">
+                            <div class="col-md-6 mb-3" style = "margin-top: 1rem!important;">
                                 <div class="card">
-                                    <div class="card-body">
-                                        <h4 class="header-title">Permissions</h4>
-                                        <p class="text-muted mb-3">Below are the permissions assigned to you.</p>
-                                        <form action="#">
-                                            <div class="custom-control custom-radio">
-                                                <input type="radio" checked disabled id="customRadio3" name="customRadio33" class="custom-control-input">
-                                                <label class="custom-control-label" for="customRadio3">Permission Set 1</label>
-                                            </div>
-                                        </form>
+                                    <div class="seo-fact sbg2">
+                                        <div class="p-4 d-flex justify-content-between align-items-center">
+                                            <div class="seofct-icon"><i class="ti-share"></i>Project 2</div>
+                                            <h2>3,984</h2>
+                                        </div>
+                                        <canvas id="seolinechart2" height="50"></canvas>
                                     </div>
                                 </div>
                             </div>
-                            <!-- Radios end -->
+                            <div class="col-md-6 mb-3 mb-lg-0">
+                                <div class="card">
+                                    <div class="seo-fact sbg3">
+                                        <div class="p-4 d-flex justify-content-between align-items-center">
+                                            <div class="seofct-icon">Project 3</div>
+                                            <canvas id="seolinechart3" height="60"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="seo-fact sbg4">
+                                        <div class="p-4 d-flex justify-content-between align-items-center">
+                                            <div class="seofct-icon">Project 4</div>
+                                            <canvas id="seolinechart4" height="60"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="col-lg-12" style = "padding-left: 0">
+                              <div class = "row">
+                                <!-- Progress Table start -->
+                                <div class="col-lg-12" style = "padding-left: 0">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h4 class="header-title" style = "font-size: 1.5rem">My Tasks</h4>
+                                            <div class="single-table">
+                                                <div class="table-responsive">
+                                                    <table class="table table-hover progress-table text-center">
+                                                        <thead class="text-uppercase">
+                                                            <tr>
+                                                                <th scope="col">ID</th>
+                                                                <th scope="col">task</th>
+                                                                <th scope="col">Deadline</th>
+                                                                <th scope="col">Progress</th>
+                                                                <th scope="col">status</th>
+                                                                <th scope="col">action</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row">1</th>
+                                                                <td>Mark</td>
+                                                                <td>09 / 07 / 2018</td>
+                                                                <td>
+                                                                    <div class="progress" style="height: 8px;">
+                                                                        <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </td>
+                                                                <td><span class="status-p bg-primary">pending</span></td>
+                                                                <td>
+                                                                    <ul class="d-flex justify-content-center">
+                                                                        <li class="mr-3"><a href="#" class="text-secondary"><i class="fa fa-edit"></i></a></li>
+                                                                        <li><a href="#" class="text-danger"><i class="ti-trash"></i></a></li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">2</th>
+                                                                <td>Mark</td>
+                                                                <td>09 / 07 / 2018</td>
+                                                                <td>
+                                                                    <div class="progress" style="height: 8px;">
+                                                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </td>
+                                                                <td><span class="status-p bg-warning">pending</span></td>
+                                                                <td>
+                                                                    <ul class="d-flex justify-content-center">
+                                                                        <li class="mr-3"><a href="#" class="text-secondary"><i class="fa fa-edit"></i></a></li>
+                                                                        <li><a href="#" class="text-danger"><i class="ti-trash"></i></a></li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">3</th>
+                                                                <td>Mark</td>
+                                                                <td>09 / 07 / 2018</td>
+                                                                <td>
+                                                                    <div class="progress" style="height: 8px;">
+                                                                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </td>
+                                                                <td><span class="status-p bg-success">complate</span></td>
+                                                                <td>
+                                                                    <ul class="d-flex justify-content-center">
+                                                                        <li class="mr-3"><a href="#" class="text-secondary"><i class="fa fa-edit"></i></a></li>
+                                                                        <li><a href="#" class="text-danger"><i class="ti-trash"></i></a></li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">4</th>
+                                                                <td>Mark</td>
+                                                                <td>09 / 07 / 2018</td>
+                                                                <td>
+                                                                    <div class="progress" style="height: 8px;">
+                                                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </td>
+                                                                <td><span class="status-p bg-warning">panding</span></td>
+                                                                <td>
+                                                                    <ul class="d-flex justify-content-center">
+                                                                        <li class="mr-3"><a href="#" class="text-secondary"><i class="fa fa-edit"></i></a></li>
+                                                                        <li><a href="#" class="text-danger"><i class="ti-trash"></i></a></li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Progress Table end -->
+                              </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-ml-12">
-                        <div class="row">
-                            <!-- Custom file input start -->
-                            <div class="col-12">
-                                <div class="card mt-5">
-                                    <div class="card-body">
-                                        <h4 class="header-title">Profile Picture</h4>
-                                        <form action="#">
-                                            <div class="input-group mb-3">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">Upload</span>
-                                                </div>
-                                                <div class="custom-file">
-                                                    <input type="file" class="custom-file-input" id="inputGroupFile01">
-                                                    <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-                                                </div>
-                                            </div>
-                                        </form>
+                    <!-- seo fact area end -->
+                    <!-- timeline area start -->
+                    <div class="col-lg-4 mt-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title">Timeline</h4>
+                                <div class="timeline-area">
+                                    <div class="timeline-task">
+                                        <div class="icon bg1">
+                                            <i class="fa fa-envelope"></i>
+                                        </div>
+                                        <div class="tm-title">
+                                            <h4>Rashed sent you an email</h4>
+                                            <span class="time"><i class="ti-time"></i>09:35</span>
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
+                                        </p>
+                                    </div>
+                                    <div class="timeline-task">
+                                        <div class="icon bg2">
+                                            <i class="fa fa-exclamation-triangle"></i>
+                                        </div>
+                                        <div class="tm-title">
+                                            <h4>Rashed sent you an email</h4>
+                                            <span class="time"><i class="ti-time"></i>09:35</span>
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
+                                        </p>
+                                    </div>
+                                    <div class="timeline-task">
+                                        <div class="icon bg2">
+                                            <i class="fa fa-exclamation-triangle"></i>
+                                        </div>
+                                        <div class="tm-title">
+                                            <h4>Rashed sent you an email</h4>
+                                            <span class="time"><i class="ti-time"></i>09:35</span>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-task">
+                                        <div class="icon bg3">
+                                            <i class="fa fa-bomb"></i>
+                                        </div>
+                                        <div class="tm-title">
+                                            <h4>Rashed sent you an email</h4>
+                                            <span class="time"><i class="ti-time"></i>09:35</span>
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
+                                        </p>
+                                    </div>
+                                    <div class="timeline-task">
+                                        <div class="icon bg3">
+                                            <i class="ti-signal"></i>
+                                        </div>
+                                        <div class="tm-title">
+                                            <h4>Rashed sent you an email</h4>
+                                            <span class="time"><i class="ti-time"></i>09:35</span>
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
-                            <!-- Custom file input end -->
                         </div>
                     </div>
+                    <!-- timeline area end -->
+
                 </div>
             </div>
         </div>
@@ -355,7 +486,7 @@
         </footer>
         <!-- footer area end-->
     </div>
-    <!-- page container area end -->
+    <!-- main wrapper start -->
     <!-- offset area start -->
     <div class="offset-area">
         <div class="offset-close"><i class="ti-close"></i></div>
@@ -544,6 +675,27 @@
     <script src="assets/js/jquery.slimscroll.min.js"></script>
     <script src="assets/js/jquery.slicknav.min.js"></script>
 
+    <!-- start chart js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <!-- start highcharts js -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <!-- start amcharts -->
+    <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+    <script src="https://www.amcharts.com/lib/3/ammap.js"></script>
+    <script src="https://www.amcharts.com/lib/3/maps/js/worldLow.js"></script>
+    <script src="https://www.amcharts.com/lib/3/serial.js"></script>
+    <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+    <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+    <!-- all line chart activation -->
+    <script src="assets/js/line-chart.js"></script>
+    <!-- all pie chart -->
+    <script src="assets/js/pie-chart.js"></script>
+    <!-- all bar chart -->
+    <script src="assets/js/bar-chart.js"></script>
+    <!-- all map chart -->
+    <script src="assets/js/maps.js"></script>
     <!-- others plugins -->
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/scripts.js"></script>

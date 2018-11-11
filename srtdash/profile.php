@@ -1,10 +1,12 @@
 ﻿<!doctype html>
 <html class="no-js" lang="en">
-
+<?php
+  include("../../reqd_connection.php")
+?>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Project Overview - srtdash</title>
+    <title>Profile - Reqd</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -20,14 +22,8 @@
     <link rel="stylesheet" href="assets/css/default-css.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
-
-    <link rel="stylesheet" href="assets/css/activityfeed.css">
-
-<!-- C:/Users/Megan/Google Drive/Documents/Monmouth/Grad 2018-2019/Fall 2018/SE 625 Information System Architecture/project/RequirementsTracking/assets/css/activityfeed.css -->
-
     <!-- modernizr css -->
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
-
 </head>
 
 <body>
@@ -41,7 +37,7 @@
     <!-- preloader area end -->
     <!-- page container area start -->
     <div class="page-container">
- 
+
         <!-- main content area start -->
         <div class="main-content">
 
@@ -257,7 +253,6 @@
                             </form>
                         </div>
                     </div>
-
                     <!-- mobile_menu -->
                     <div class="col-12 d-block d-lg-none">
                         <div id="mobile_menu"></div>
@@ -268,159 +263,88 @@
         <!-- header area end -->
         <!-- page title area end -->
 
-<!-- page title area start -->
-            <div class="page-title-area">
-                <div class="row align-items-center">
-                    <div class="col-sm-6">
-                        <div class="breadcrumbs-area clearfix">
-                            <h4 class="page-title pull-left">Project Overview</h4>
-                            <ul class="breadcrumbs pull-left">
-                                <li><a href="index.html">Dashboard</a></li>
-                                <li><span>Project Overview</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- page title area end -->	  
-
             <div class="main-content-inner">
                 <div class="row">
-                    <!-- Description start -->
-                    <div class="col-12 mt-5">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="header-title">Description</h4>
-                                <div class="icon-section">
-                                        <text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</text>
+                    <div class="col-lg-6 col-ml-12">
+                        <div class="row">
+                            <!-- basic form start -->
+                            <div class="col-12 mt-5">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Personal Profile</h4>
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="first-name-input" class="col-form-label">First Name</label>
+                                                <input class="form-control" type="text" value="Carlos" id="first-name-input">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="last-name-input" class="col-form-label">Last Name</label>
+                                                <input class="form-control" type="text" value="Rath" id="last-name-input">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="company-input" class="col-form-label">Company</label>
+                                                <input class="form-control" type="text" value="Monmouth University" id="company-input">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="position-input" class="col-form-label">Position</label>
+                                                <input class="form-control" type="text" value="Associate" id="position-input">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="email-input" class="col-form-label">Work Email</label>
+                                                <input class="form-control" type="email" value="crath@gmail.com" id="email-input">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="work-tel-input" class="col-form-label">Work Telephone</label>
+                                                <input class="form-control" type="text" value="555-555-5555" id="work-tel-input">
+                                            </div>
+                                            <button type="submit" class="btn btn-primary mt-4 pr-4 pl-4">Submit</button>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <!-- Description end -->
-                    <!-- Project Info start -->
-                    <div class="col-12 mt-5">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="header-title">Project Info</h4>
-                                <div class="icon-section">
-				    <div class="icon-container">
-                                        <b> Owner</b>
-                                        <br> Req'D Inc.</br>
-                                    </div>
-                                    <div class="icon-container">
-                                        <b> Customer</b>
-                                        <br> Dr. Bill</br>
-                                    </div>
-                                    <div class="icon-container">
-                                        <b> Team</b>
-                                        <br> SE 625 Fall '18</br>
-                                    </div>
-				    <div class="icon-container">
-                                        <b> Deadline</b>
-                                        <br> December 31st, 2018</br>
+                            <!-- basic form end -->
+                            <!-- Radios start -->
+                            <div class="col-12 mt-5">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Permissions</h4>
+                                        <p class="text-muted mb-3">Below are the permissions assigned to you.</p>
+                                        <form action="#">
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" checked disabled id="customRadio3" name="customRadio33" class="custom-control-input">
+                                                <label class="custom-control-label" for="customRadio3">Permission Set 1</label>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
+                            <!-- Radios end -->
                         </div>
                     </div>
-                    <!-- Project Info end -->
-
-                    <!-- Activity Table start -->
-		    <div class="col-12 mt-5">
-                        <div class="card">
-                            <div class="card-body">
-
-				<h4 class="header-title">Activity</h4>
-
-				<div class="container">
-   					<div class="row">
-      
-      						<div class="col-md-12 col-lg-12">
-         						<div id="tracking-pre"></div>
-         						<div id="tracking">
-            							<div class="activity-list">
-               								<div class="tracking-item">
-                  								<div class="tracking-icon status-intransit">
-                     									<svg class="svg-inline--fa fa-circle fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
-                        									<path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path>
-                     									</svg>
-                     									<!-- <i class="fas fa-circle"></i> -->
-                  								</div>
-                  								<div class="tracking-date">Jul 10, 2018<span>07:30 AM</span></div>
-                  								<div class="tracking-content">Closed Requirement #4567<span>Liam Grover</span></div>
-               								</div>
-									<div class="tracking-item">
-                  								<div class="tracking-icon status-intransit">
-                     									<svg class="svg-inline--fa fa-circle fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
-                        									<path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path>
-                     									</svg>
-                     									<!-- <i class="fas fa-circle"></i> -->
-                  								</div>
-                  								<div class="tracking-date">Jul 10, 2018<span>07:30 AM</span></div>
-                  								<div class="tracking-content">Approved Requirement #6789<span>James O'Donnell</span></div>
-               								</div>
-               								<div class="tracking-item">
-                  								<div class="tracking-icon status-intransit">
-                     									<svg class="svg-inline--fa fa-circle fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
-                        									<path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path>
-                     									</svg>
-                     									<!-- <i class="fas fa-circle"></i> -->
-                  								</div>
-                  								<div class="tracking-date">Jul 10, 2018<span>03:59 AM</span></div>
-                  								<div class="tracking-content">Replied to Discussion on Requirement #4567<span>Casey Little</span></div>
-               								</div>
-               								<div class="tracking-item">
-                  								<div class="tracking-icon status-intransit">
-                     									<svg class="svg-inline--fa fa-circle fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
-                        									<path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path>
-                     									</svg>
-                     									<!-- <i class="fas fa-circle"></i> -->
-                  								</div>
-                  								<div class="tracking-date">Jul 09, 2018<span>04:03 PM</span></div>
-                  								<div class="tracking-content">Closed Requirement #1234<span>Matt Drew</span></div>
-               								</div>
-               								<div class="tracking-item">
-                  								<div class="tracking-icon status-intransit">
-                     									<svg class="svg-inline--fa fa-circle fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
-                        									<path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path>
-                     									</svg>
-                     									<!-- <i class="fas fa-circle"></i> -->
-                  								</div>
-                  								<div class="tracking-date">Jul 09, 2018<span>11:04 AM</span></div>
-                  								<div class="tracking-content">Added Project Info<span>Paul Bundac</span></div>
-               								</div>
-               								<div class="tracking-item">
-                  								<div class="tracking-icon status-intransit">
-                     									<svg class="svg-inline--fa fa-circle fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
-                        									<path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path>
-                     									</svg>
-                     									<!-- <i class="fas fa-circle"></i> -->
-                  								</div>
-                  								<div class="tracking-date">Jul 09, 2018<span>10:09 AM</span></div>
-                  								<div class="tracking-content">Added Requirements<span>KerryAnn DeMeester</span></div>
-               								</div>
-               								<div class="tracking-item">
-                  								<div class="tracking-icon status-inforeceived">
-											<svg class="svg-inline--fa fa-clipboard-list fa-w-12" aria-hidden="true" data-prefix="fas" data-icon="clipboard-list" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg="">
-                        									<path fill="currentColor" d="M336 64h-80c0-35.3-28.7-64-64-64s-64 28.7-64 64H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zM96 424c-13.3 0-24-10.7-24-24s10.7-24 24-24 24 10.7 24 24-10.7 24-24 24zm0-96c-13.3 0-24-10.7-24-24s10.7-24 24-24 24 10.7 24 24-10.7 24-24 24zm0-96c-13.3 0-24-10.7-24-24s10.7-24 24-24 24 10.7 24 24-10.7 24-24 24zm96-192c13.3 0 24 10.7 24 24s-10.7 24-24 24-24-10.7-24-24 10.7-24 24-24zm128 368c0 4.4-3.6 8-8 8H168c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h144c4.4 0 8 3.6 8 8v16zm0-96c0 4.4-3.6 8-8 8H168c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h144c4.4 0 8 3.6 8 8v16zm0-96c0 4.4-3.6 8-8 8H168c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h144c4.4 0 8 3.6 8 8v16z"></path>
-                     									</svg>
-											<!-- <i class="fas fa-clipboard-list"></i> -->
-                  								</div>
-                  								<div class="tracking-date">Jul 06, 2018<span>02:02 PM</span></div>
-                  								<div class="tracking-content">Created Project<span>Megan Rapach</span></div>
-               								</div>
-            							</div>
-         						</div>
-      						</div>
-   					</div>
-				</div>
-
-			    </div>
-			</div>
-		    </div>
-                    <!-- Activity Table end -->
-
+                    <div class="col-lg-6 col-ml-12">
+                        <div class="row">
+                            <!-- Custom file input start -->
+                            <div class="col-12">
+                                <div class="card mt-5">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Profile Picture</h4>
+                                        <form action="#">
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">Upload</span>
+                                                </div>
+                                                <div class="custom-file">
+                                                    <input type="file" class="custom-file-input" id="inputGroupFile01">
+                                                    <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Custom file input end -->
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

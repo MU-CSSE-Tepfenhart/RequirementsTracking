@@ -1,10 +1,12 @@
-<!doctype html>
+﻿<!doctype html>
 <html class="no-js" lang="en">
-
+<?php
+  include("../../reqd_connection.php")
+?>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>srtdash - SEO Dashboard</title>
+    <title>Project Overview - srtdash</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -20,11 +22,17 @@
     <link rel="stylesheet" href="assets/css/default-css.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <link rel="stylesheet" href="assets/css/activityfeed.css">
+
+<!-- C:/Users/Megan/Google Drive/Documents/Monmouth/Grad 2018-2019/Fall 2018/SE 625 Information System Architecture/project/RequirementsTracking/assets/css/activityfeed.css -->
+
     <!-- modernizr css -->
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+
 </head>
 
-<body class="body-bg">
+<body>
     <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -33,7 +41,13 @@
         <div class="loader"></div>
     </div>
     <!-- preloader area end -->
-    <!-- main wrapper start -->
+    <!-- page container area start -->
+    <div class="page-container">
+
+        <!-- main content area start -->
+        <div class="main-content">
+
+	  <!-- main wrapper start -->
     <div class="horizontal-main-wrapper">
         <!-- main header area start -->
         <div class="mainheader-area">
@@ -41,15 +55,13 @@
                 <div class="row align-items-center">
                     <div class="col-md-3">
                         <div class="logo">
-                            <a href="index.html"><img src="assets/images/icon/logo2.png" alt="logo"></a>
+                            <a href="index.html">Dashboard | Reqt</a>
                         </div>
                     </div>
                     <!-- profile info & task notification -->
                     <div class="col-md-9 clearfix text-right">
                         <div class="d-md-inline-block d-block mr-md-4">
                             <ul class="notification-area">
-                                <li id="full-view"><i class="ti-fullscreen"></i></li>
-                                <li id="full-view-exit"><i class="ti-zoom-out"></i></li>
                                 <li class="dropdown">
                                     <i class="ti-bell dropdown-toggle" data-toggle="dropdown">
                                         <span>2</span>
@@ -195,11 +207,10 @@
                         <div class="clearfix d-md-inline-block d-block">
                             <div class="user-profile m-0">
                                 <img class="avatar user-thumb" src="assets/images/author/avatar.png" alt="avatar">
-                                <h4 class="user-name dropdown-toggle" data-toggle="dropdown">Kumkum Rai <i class="fa fa-angle-down"></i></h4>
+                                <h4 class="user-name dropdown-toggle" data-toggle="dropdown">name goes here<i class="fa fa-angle-down"></i></h4>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Message</a>
-                                    <a class="dropdown-item" href="#">Settings</a>
-                                    <a class="dropdown-item" href="#">Log Out</a>
+                                    <a class="dropdown-item" href="settings.php">Settings</a>
+                                    <a class="dropdown-item" href="login.php" onclick = "logout()">Log Out</a>
                                 </div>
                             </div>
                         </div>
@@ -217,87 +228,24 @@
                             <nav>
                                 <ul id="nav_menu">
                                     <li>
-                                        <a href="javascript:void(0)"><i class="ti-dashboard"></i><span>dashboard</span></a>
-                                        <ul class="submenu">
-                                            <li><a href="index.html">ICO dashboard</a></li>
-                                            <li><a href="index2.html">Ecommerce dashboard</a></li>
-                                            <li><a href="index3.html">SEO dashboard</a></li>
-                                        </ul>
+                                        <a href="index.html"><i class="ti-dashboard"></i><span>dashboard</span></a>
+
                                     </li>
-                                    <li class="active">
-                                        <a href="javascript:void(0)"><i class="ti-layout-sidebar-left"></i><span>Sidebar
-                                                Types</span></a>
+                                    <li>
+                                        <a href="javascript:void(0)"><i class="ti-pie-chart"></i><span>Requirements</span></a>
                                         <ul class="submenu">
-                                            <li><a href="index.html">Left Sidebar</a></li>
-                                            <li class="active"><a href="index3-horizontalmenu.html">Horizontal Sidebar</a></li>
+                                            <li><a href="requirements.php">Requirements</a></li>
+                                            <li><a href="requirementsgrid.php">Reqirements Grid</a></li>
+                                            <li><a href="requirementslist.php">Requirements List</a></li>
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="javascript:void(0)"><i class="ti-pie-chart"></i><span>Charts</span></a>
+                                        <a href="javascript:void(0)"><i class="ti-palette"></i><span>Project</span></a>
                                         <ul class="submenu">
-                                            <li><a href="barchart.html">bar chart</a></li>
-                                            <li><a href="linechart.html">line Chart</a></li>
-                                            <li><a href="piechart.html">pie chart</a></li>
+                                            <li><a href="projectoverview.php">Overview</a></li>
                                         </ul>
                                     </li>
-                                    <li class="mega-menu">
-                                        <a href="javascript:void(0)"><i class="ti-palette"></i><span>UI Features</span></a>
-                                        <ul class="submenu">
-                                            <li><a href="accordion.html">Accordion</a></li>
-                                            <li><a href="alert.html">Alert</a></li>
-                                            <li><a href="badge.html">Badge</a></li>
-                                            <li><a href="button.html">Button</a></li>
-                                            <li><a href="button-group.html">Button Group</a></li>
-                                            <li><a href="cards.html">Cards</a></li>
-                                            <li><a href="dropdown.html">Dropdown</a></li>
-                                            <li><a href="list-group.html">List Group</a></li>
-                                            <li><a href="media-object.html">Media Object</a></li>
-                                            <li><a href="modal.html">Modal</a></li>
-                                            <li><a href="pagination.html">Pagination</a></li>
-                                            <li><a href="popovers.html">Popover</a></li>
-                                            <li><a href="progressbar.html">Progressbar</a></li>
-                                            <li><a href="tab.html">Tab</a></li>
-                                            <li><a href="typography.html">Typography</a></li>
-                                            <li><a href="form.html">Form</a></li>
-                                            <li><a href="grid.html">grid system</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="mega-menu">
-                                        <a href="javascript:void(0)"><i class="ti-layers-alt"></i> <span>Pages</span></a>
-                                        <ul class="submenu">
-                                            <li><a href="login.html">Login</a></li>
-                                            <li><a href="login2.html">Login 2</a></li>
-                                            <li><a href="login3.html">Login 3</a></li>
-                                            <li><a href="register.html">Register</a></li>
-                                            <li><a href="register2.html">Register 2</a></li>
-                                            <li><a href="register3.html">Register 3</a></li>
-                                            <li><a href="register4.html">Register 4</a></li>
-                                            <li><a href="screenlock.html">Lock Screen</a></li>
-                                            <li><a href="screenlock2.html">Lock Screen 2</a></li>
-                                            <li><a href="reset-pass.html">reset password</a></li>
-                                            <li><a href="pricing.html">Pricing</a></li>
-                                            <li><a href="404.html">Error 404</a></li>
-                                            <li><a href="500.html">Error 500</a></li>
-                                            <li><a href="invoice.html"><i class="ti-receipt"></i> <span>Invoice Summary</span></a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)"><i class="ti-slice"></i><span>icons</span></a>
-                                        <ul class="submenu">
-                                            <li><a href="fontawesome.html">fontawesome icons</a></li>
-                                            <li><a href="themify.html">themify icons</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)"><i class="fa fa-table"></i>
-                                            <span>Tables</span></a>
-                                        <ul class="submenu">
-                                            <li><a href="table-basic.html">basic table</a></li>
-                                            <li><a href="table-layout.html">table layout</a></li>
-                                            <li><a href="datatable.html">datatable</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="maps.html"><i class="ti-map-alt"></i> <span>maps</span></a></li>
+                                    <li><a href="profile.php"><i class="ti-map-alt"></i> <span>Profile</span></a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -311,6 +259,7 @@
                             </form>
                         </div>
                     </div>
+
                     <!-- mobile_menu -->
                     <div class="col-12 d-block d-lg-none">
                         <div id="mobile_menu"></div>
@@ -320,212 +269,160 @@
         </div>
         <!-- header area end -->
         <!-- page title area end -->
-        <div class="main-content-inner">
-            <div class="container">
+
+<!-- page title area start -->
+            <div class="page-title-area">
+                <div class="row align-items-center">
+                    <div class="col-sm-6">
+                        <div class="breadcrumbs-area clearfix">
+                            <h4 class="page-title pull-left">Project Overview</h4>
+                            <ul class="breadcrumbs pull-left">
+                                <li><a href="index.html">Dashboard</a></li>
+                                <li><span>Project Overview</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- page title area end -->
+
+            <div class="main-content-inner">
                 <div class="row">
-                    <!-- seo fact area start -->
-                    <div class="col-lg-8">
-                        <div class="row">
-                            <div class="col-md-6 mt-5 mb-3">
-                                <div class="card">
-                                    <div class="seo-fact sbg1">
-                                        <div class="p-4 d-flex justify-content-between align-items-center">
-                                            <div class="seofct-icon"><i class="ti-thumb-up"></i> Likes</div>
-                                            <h2>2,315</h2>
-                                        </div>
-                                        <canvas id="seolinechart1" height="50"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mt-md-5 mb-3">
-                                <div class="card">
-                                    <div class="seo-fact sbg2">
-                                        <div class="p-4 d-flex justify-content-between align-items-center">
-                                            <div class="seofct-icon"><i class="ti-share"></i> Share</div>
-                                            <h2>3,984</h2>
-                                        </div>
-                                        <canvas id="seolinechart2" height="50"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-3 mb-lg-0">
-                                <div class="card">
-                                    <div class="seo-fact sbg3">
-                                        <div class="p-4 d-flex justify-content-between align-items-center">
-                                            <div class="seofct-icon">Impressions</div>
-                                            <canvas id="seolinechart3" height="60"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="card">
-                                    <div class="seo-fact sbg4">
-                                        <div class="p-4 d-flex justify-content-between align-items-center">
-                                            <div class="seofct-icon">New Users</div>
-                                            <canvas id="seolinechart4" height="60"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- seo fact area end -->
-                    <!-- Social Campain area start -->
-                    <div class="col-lg-4 mt-5">
-                        <div class="card">
-                            <div class="card-body pb-0">
-                                <h4 class="header-title">Social ads Campain</h4>
-                                <div id="socialads" style="height: 245px;"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Social Campain area end -->
-                    <!-- Statistics area start -->
-                    <div class="col-lg-8 mt-5">
+                    <!-- Description start -->
+                    <div class="col-12 mt-5">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="header-title">User Statistics</h4>
-                                <div id="user-statistics"></div>
+                                <h4 class="header-title">Description</h4>
+                                <div class="icon-section">
+                                        <text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</text>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Statistics area end -->
-                    <!-- Advertising area start -->
-                    <div class="col-lg-4 mt-5">
+                    <!-- Description end -->
+                    <!-- Project Info start -->
+                    <div class="col-12 mt-5">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="header-title">Advertising & Marketing</h4>
-                                <canvas id="seolinechart8" height="233"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Advertising area end -->
-                    <!-- sales area start -->
-                    <div class="col-xl-8 col-lg-8 mt-5">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="header-title">Sales</h4>
-                                <div id="salesanalytic"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- sales area end -->
-                    <!-- timeline area start -->
-                    <div class="col-xl-4 col-lg-4 mt-5">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="header-title">Timeline</h4>
-                                <div class="timeline-area">
-                                    <div class="timeline-task">
-                                        <div class="icon bg1">
-                                            <i class="fa fa-envelope"></i>
-                                        </div>
-                                        <div class="tm-title">
-                                            <h4>Rashed sent you an email</h4>
-                                            <span class="time"><i class="ti-time"></i>09:35</span>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
-                                        </p>
+                                <h4 class="header-title">Project Info</h4>
+                                <div class="icon-section">
+				    <div class="icon-container">
+                                        <b> Owner</b>
+                                        <br> Req'D Inc.</br>
                                     </div>
-                                    <div class="timeline-task">
-                                        <div class="icon bg2">
-                                            <i class="fa fa-exclamation-triangle"></i>
-                                        </div>
-                                        <div class="tm-title">
-                                            <h4>Rashed sent you an email</h4>
-                                            <span class="time"><i class="ti-time"></i>09:35</span>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
-                                        </p>
+                                    <div class="icon-container">
+                                        <b> Customer</b>
+                                        <br> Dr. Bill</br>
                                     </div>
-                                    <div class="timeline-task">
-                                        <div class="icon bg2">
-                                            <i class="fa fa-exclamation-triangle"></i>
-                                        </div>
-                                        <div class="tm-title">
-                                            <h4>Rashed sent you an email</h4>
-                                            <span class="time"><i class="ti-time"></i>09:35</span>
-                                        </div>
+                                    <div class="icon-container">
+                                        <b> Team</b>
+                                        <br> SE 625 Fall '18</br>
                                     </div>
-                                    <div class="timeline-task">
-                                        <div class="icon bg3">
-                                            <i class="fa fa-bomb"></i>
-                                        </div>
-                                        <div class="tm-title">
-                                            <h4>Rashed sent you an email</h4>
-                                            <span class="time"><i class="ti-time"></i>09:35</span>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
-                                        </p>
-                                    </div>
-                                    <div class="timeline-task">
-                                        <div class="icon bg3">
-                                            <i class="ti-signal"></i>
-                                        </div>
-                                        <div class="tm-title">
-                                            <h4>Rashed sent you an email</h4>
-                                            <span class="time"><i class="ti-time"></i>09:35</span>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
-                                        </p>
+				    <div class="icon-container">
+                                        <b> Deadline</b>
+                                        <br> December 31st, 2018</br>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- timeline area end -->
-                    <!-- map area start -->
-                    <div class="col-lg-5 mt-5">
+                    <!-- Project Info end -->
+
+                    <!-- Activity Table start -->
+		    <div class="col-12 mt-5">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="header-title">Marketing Area</h4>
-                                <div id="seomap"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- map area end -->
-                    <!-- testimonial area start -->
-                    <div class="col-lg-7 mt-5">
-                        <div class="card">
-                            <div class="card-body bg1">
-                                <h4 class="header-title text-white">Client Feadback</h4>
-                                <div class="testimonial-carousel owl-carousel">
-                                    <div class="tst-item">
-                                        <div class="tstu-img">
-                                            <img src="assets/images/team/team-author1.jpg" alt="author image">
-                                        </div>
-                                        <div class="tstu-content">
-                                            <h4 class="tstu-name">Abel Franecki</h4>
-                                            <span class="profsn">Designer</span>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae laborum ut nihil numquam a aliquam alias necessitatibus ipsa soluta quam!</p>
-                                        </div>
-                                    </div>
-                                    <div class="tst-item">
-                                        <div class="tstu-img">
-                                            <img src="assets/images/team/team-author2.jpg" alt="author image">
-                                        </div>
-                                        <div class="tstu-content">
-                                            <h4 class="tstu-name">Abel Franecki</h4>
-                                            <span class="profsn">Designer</span>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae laborum ut nihil numquam a aliquam alias necessitatibus ipsa soluta quam!</p>
-                                        </div>
-                                    </div>
-                                    <div class="tst-item">
-                                        <div class="tstu-img">
-                                            <img src="assets/images/team/team-author3.jpg" alt="author image">
-                                        </div>
-                                        <div class="tstu-content">
-                                            <h4 class="tstu-name">Abel Franecki</h4>
-                                            <span class="profsn">Designer</span>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae laborum ut nihil numquam a aliquam alias necessitatibus ipsa soluta quam!</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- testimonial area end -->
+
+				<h4 class="header-title">Activity</h4>
+
+				<div class="container">
+   					<div class="row">
+
+      						<div class="col-md-12 col-lg-12">
+         						<div id="tracking-pre"></div>
+         						<div id="tracking">
+            							<div class="activity-list">
+               								<div class="tracking-item">
+                  								<div class="tracking-icon status-intransit">
+                     									<svg class="svg-inline--fa fa-circle fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                        									<path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path>
+                     									</svg>
+                     									<!-- <i class="fas fa-circle"></i> -->
+                  								</div>
+                  								<div class="tracking-date">Jul 10, 2018<span>07:30 AM</span></div>
+                  								<div class="tracking-content">Closed Requirement #4567<span>Liam Grover</span></div>
+               								</div>
+									<div class="tracking-item">
+                  								<div class="tracking-icon status-intransit">
+                     									<svg class="svg-inline--fa fa-circle fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                        									<path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path>
+                     									</svg>
+                     									<!-- <i class="fas fa-circle"></i> -->
+                  								</div>
+                  								<div class="tracking-date">Jul 10, 2018<span>07:30 AM</span></div>
+                  								<div class="tracking-content">Approved Requirement #6789<span>James O'Donnell</span></div>
+               								</div>
+               								<div class="tracking-item">
+                  								<div class="tracking-icon status-intransit">
+                     									<svg class="svg-inline--fa fa-circle fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                        									<path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path>
+                     									</svg>
+                     									<!-- <i class="fas fa-circle"></i> -->
+                  								</div>
+                  								<div class="tracking-date">Jul 10, 2018<span>03:59 AM</span></div>
+                  								<div class="tracking-content">Replied to Discussion on Requirement #4567<span>Casey Little</span></div>
+               								</div>
+               								<div class="tracking-item">
+                  								<div class="tracking-icon status-intransit">
+                     									<svg class="svg-inline--fa fa-circle fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                        									<path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path>
+                     									</svg>
+                     									<!-- <i class="fas fa-circle"></i> -->
+                  								</div>
+                  								<div class="tracking-date">Jul 09, 2018<span>04:03 PM</span></div>
+                  								<div class="tracking-content">Closed Requirement #1234<span>Matt Drew</span></div>
+               								</div>
+               								<div class="tracking-item">
+                  								<div class="tracking-icon status-intransit">
+                     									<svg class="svg-inline--fa fa-circle fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                        									<path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path>
+                     									</svg>
+                     									<!-- <i class="fas fa-circle"></i> -->
+                  								</div>
+                  								<div class="tracking-date">Jul 09, 2018<span>11:04 AM</span></div>
+                  								<div class="tracking-content">Added Project Info<span>Paul Bundac</span></div>
+               								</div>
+               								<div class="tracking-item">
+                  								<div class="tracking-icon status-intransit">
+                     									<svg class="svg-inline--fa fa-circle fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                        									<path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path>
+                     									</svg>
+                     									<!-- <i class="fas fa-circle"></i> -->
+                  								</div>
+                  								<div class="tracking-date">Jul 09, 2018<span>10:09 AM</span></div>
+                  								<div class="tracking-content">Added Requirements<span>KerryAnn DeMeester</span></div>
+               								</div>
+               								<div class="tracking-item">
+                  								<div class="tracking-icon status-inforeceived">
+											<svg class="svg-inline--fa fa-clipboard-list fa-w-12" aria-hidden="true" data-prefix="fas" data-icon="clipboard-list" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg="">
+                        									<path fill="currentColor" d="M336 64h-80c0-35.3-28.7-64-64-64s-64 28.7-64 64H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zM96 424c-13.3 0-24-10.7-24-24s10.7-24 24-24 24 10.7 24 24-10.7 24-24 24zm0-96c-13.3 0-24-10.7-24-24s10.7-24 24-24 24 10.7 24 24-10.7 24-24 24zm0-96c-13.3 0-24-10.7-24-24s10.7-24 24-24 24 10.7 24 24-10.7 24-24 24zm96-192c13.3 0 24 10.7 24 24s-10.7 24-24 24-24-10.7-24-24 10.7-24 24-24zm128 368c0 4.4-3.6 8-8 8H168c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h144c4.4 0 8 3.6 8 8v16zm0-96c0 4.4-3.6 8-8 8H168c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h144c4.4 0 8 3.6 8 8v16zm0-96c0 4.4-3.6 8-8 8H168c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h144c4.4 0 8 3.6 8 8v16z"></path>
+                     									</svg>
+											<!-- <i class="fas fa-clipboard-list"></i> -->
+                  								</div>
+                  								<div class="tracking-date">Jul 06, 2018<span>02:02 PM</span></div>
+                  								<div class="tracking-content">Created Project<span>Megan Rapach</span></div>
+               								</div>
+            							</div>
+         						</div>
+      						</div>
+   					</div>
+				</div>
+
+			    </div>
+			</div>
+		    </div>
+                    <!-- Activity Table end -->
+
                 </div>
             </div>
         </div>
@@ -538,7 +435,7 @@
         </footer>
         <!-- footer area end-->
     </div>
-    <!-- main wrapper start -->
+    <!-- page container area end -->
     <!-- offset area start -->
     <div class="offset-area">
         <div class="offset-close"><i class="ti-close"></i></div>
@@ -727,27 +624,6 @@
     <script src="assets/js/jquery.slimscroll.min.js"></script>
     <script src="assets/js/jquery.slicknav.min.js"></script>
 
-    <!-- start chart js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
-    <!-- start highcharts js -->
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/export-data.js"></script>
-    <!-- start amcharts -->
-    <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
-    <script src="https://www.amcharts.com/lib/3/ammap.js"></script>
-    <script src="https://www.amcharts.com/lib/3/maps/js/worldLow.js"></script>
-    <script src="https://www.amcharts.com/lib/3/serial.js"></script>
-    <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
-    <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
-    <!-- all line chart activation -->
-    <script src="assets/js/line-chart.js"></script>
-    <!-- all pie chart -->
-    <script src="assets/js/pie-chart.js"></script>
-    <!-- all bar chart -->
-    <script src="assets/js/bar-chart.js"></script>
-    <!-- all map chart -->
-    <script src="assets/js/maps.js"></script>
     <!-- others plugins -->
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/scripts.js"></script>
