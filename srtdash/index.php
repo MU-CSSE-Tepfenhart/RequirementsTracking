@@ -512,11 +512,10 @@
         <div class="offset-close"><i class="ti-close"></i></div>
         <ul class="nav offset-menu-tab">
             
-            <li><a data-toggle="tab" href="#settings" class="active show">Settings</a></li>
-        </ul>
+<li><a class="active" data-toggle="tab" href="#settings">Settings</a></li>        </ul>
         <div class="offset-content tab-content">
             
-            <div id="settings" class="tab-pane fade active show">
+            <div id="settings" class="tab-pane fade in active show">
                 <div class="offset-settings">
                     <h4>General Settings</h4>
                     <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: calc(100vh - 158px);"><div class="settings-list" style="overflow: hidden; width: auto; height: calc(100vh - 158px);">
