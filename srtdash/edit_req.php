@@ -49,7 +49,7 @@
 	?>
 	
 	<div id="content" >	
-		<h1>View Requirments</h1>		
+		<h1>Edit Requirment: <?php echo $requirement_id ?></h1>		
 
 		<center><table>
 			<col width="50">
@@ -61,17 +61,6 @@
 			<col width="60">
 			<col width="50">
 			<col width="50">
-		<tr>
-			<th>Req ID</th>
-			<th>Type</th>
-			<th>Start Date</th>
-			<th>End Date</th>
-			<th>Assigner</th>
-			<th>Parent Req ID</th>
-			<th>Summary</th>
-			<th>Assignee</th>
-			<th>Version</th>
-		</tr>
 
 		<?php 
 			//connect to DB
@@ -81,17 +70,16 @@
 			$r = $conn->query($q); //r variable is an object reference that stores connection of query
 			
 			while ($row = $r->fetch_assoc()) { //puts one record r in row, making sure its not null 
-				echo "<tr>";
-					echo "<td>".$row['requirement_id']."</td>";
-					echo "<td>".$row['requirement_type']."</td>";
-					echo "<td>".$row['requirement_sdate']."</td>";
-					echo "<td>".$row['requirement_edate']."</td>";
-					echo "<td>".$row['requirement_assigner']."</td>";
-					echo "<td>".$row['requirement_parent']."</td>";
-					echo "<td>".$row['requirement_summary']."</td>";
-					echo "<td>".$row['requirement_assignee']."</td>";
-					echo "<td>".$row['requirement_version']."</td>";
-				echo "</tr>";
+				
+					$requirement_type = $row['requirement_type'];
+					$requirement_sdate = $row['requirement_sdate'];
+					$requirement_edate = $row['requirement_edate'];
+					$requirement_assigner = $row['requirement_assigner'];
+					$requirement_parent = $row['requirement_parent'];
+					$requirement_summary = $row['requirement_summary'];
+					$requirement_assignee = $row['requirement_assignee'];
+					$requirement_version = $row['requirement_version'];
+				
 			}
 			
 		?>					
@@ -101,39 +89,54 @@
 			
 			<tr>
 				<td>Requirement Type:</td>
-				<td><input type="text" name="requirement_type" id = "requirement_type"></td>
+				<td><input type="text" name="requirement_type" 
+				id = "requirement_type" value=<?php echo $requirement_type ?>></td>
 			</tr>
 			<tr>
 				<td>Requirement Start Date:</td>
-				<td><input type="text" name="requirement_sdate" id = "requirement_type" ></td>
+				<td><input type="text" name="requirement_sdate" 
+				id = "requirement_type" value=<?php echo $requirement_sdate ?>></td>
 			</tr>
 			<tr>
 				<td>Requirement End Date:</td>
-				<td><input type="text" name="requirement_edate" id = "requirement_type"></td>
+				<td><input type="text" name="requirement_edate" 
+				id = "requirement_type" value=<?php echo $requirement_edate ?>></td>
 			</tr>
 			<tr>
 				<td>Requirement Assigner:</td>
-				<td><input type="text" name="requirement_assigner" id = "requirement_type"></td>
+				<td><input type="text" name="requirement_assigner" 
+				id = "requirement_type" value=<?php echo $requirement_assigner ?>></td>
 			</tr>
 			<tr>
 				<td>Parent Requirement:</td>
-				<td><input type="text" name="requirement_parent" id = "requirement_type"></td>
+				<td><input type="text" name="requirement_parent" 
+				id = "requirement_type" value=<?php echo $requirement_parent ?>></td>
 			</tr>
 			<tr>
 				<td>Requirement Summary:</td>
-				<td><input type="text" name="requirement_summary" id = "requirement_type"></td>
+				<td><input type="text" name="requirement_summary" 
+				id = "requirement_type" value=<?php echo $requirement_summary ?>></td>
 			</tr>
 			<tr>
 				<td>Requirement Assignee:</td>
-				<td><input type="text" name="requirement_assignee" id = "requirement_type"></td>
+				<td><input type="text" name="requirement_assignee" 
+				id = "requirement_type" value=<?php echo $requirement_assignee ?>></td>
 			</tr>
 			<tr>
 				<td>Requirement Version:</td>
-				<td><input type="text" name="requirement_version" id = "requirement_type"></td>
+				<td><input type="text" name="requirement_version" 
+				id = "requirement_type" value=<?php echo $requirement_version ?>></td>
 			</tr>
 			<tr>
 				<td></td>
-				<td><input type="submit" value="Update"></td>
+				<td>
+				<a href="/srtdash/requirementslist.php">Back</a>
+				<input type="submit" value="Update">
+				<a href="/srtdash/index.php">Home</a>
+				</td>
+			</tr>
+			
+			
 			</table></center>
 		</form>
 	</div> <!--content -->
