@@ -1,6 +1,8 @@
 <!doctype html>
 	<html class="no-js" lang="en">
-	
+	<?php
+	  include("../../reqd_connection.php")
+	?>
 
 	<head>
 	    <meta charset="utf-8">
