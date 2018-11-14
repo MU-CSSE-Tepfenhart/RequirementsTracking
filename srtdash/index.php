@@ -1,9 +1,4 @@
-<!doctype html>
-<html class="no-js" lang="en">
-<?php
-  include("../../reqd_connection.php")
-?>
-<head>
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths" lang="en" style=""><head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Dashboard | Reqt</title>
@@ -16,7 +11,7 @@
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/slicknav.min.css">
     <!-- amchart css -->
-    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all">
     <!-- others css -->
     <link rel="stylesheet" href="assets/css/typography.css">
     <link rel="stylesheet" href="assets/css/default-css.css">
@@ -24,16 +19,15 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
     <!-- modernizr css -->
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
-</head>
+<style type="text/css">/* Chart.js */
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style></head>
 
 <body class="body-bg">
     <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
     <!-- preloader area start -->
-    <div id="preloader">
-        <div class="loader"></div>
-    </div>
+    
     <!-- preloader area end -->
     <!-- main wrapper start -->
     <div class="horizontal-main-wrapper">
@@ -56,7 +50,7 @@
                                     </i>
                                     <div class="dropdown-menu bell-notify-box notify-box">
                                         <span class="notify-title">You have 3 new notifications <a href="#">view all</a></span>
-                                        <div class="nofity-list">
+                                        <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 435px;"><div class="nofity-list" style="overflow: hidden; width: auto; height: 435px;">
                                             <a href="#" class="notify-item">
                                                 <div class="notify-thumb"><i class="ti-key btn-danger"></i></div>
                                                 <div class="notify-text">
@@ -106,14 +100,14 @@
                                                     <span>Just Now</span>
                                                 </div>
                                             </a>
-                                        </div>
+                                        </div><div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; height: 295.203px;"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
                                     </div>
                                 </li>
                                 <li class="dropdown">
                                     <i class="fa fa-envelope-o dropdown-toggle" data-toggle="dropdown"><span>3</span></i>
                                     <div class="dropdown-menu notify-box nt-enveloper-box">
                                         <span class="notify-title">You have 3 new notifications <a href="#">view all</a></span>
-                                        <div class="nofity-list">
+                                        <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 435px;"><div class="nofity-list" style="overflow: hidden; width: auto; height: 435px;">
                                             <a href="#" class="notify-item">
                                                 <div class="notify-thumb">
                                                     <img src="assets/images/author/author-img1.jpg" alt="image">
@@ -184,10 +178,10 @@
                                                     <span>3:15 PM</span>
                                                 </div>
                                             </a>
-                                        </div>
+                                        </div><div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; height: 238.019px;"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
                                     </div>
                                 </li>
-                                <li class="settings-btn">
+                                <li class="settings-btn active">
                                     <i class="ti-settings"></i>
                                 </li>
                             </ul>
@@ -195,7 +189,7 @@
                         <div class="clearfix d-md-inline-block d-block">
                             <div class="user-profile m-0">
                                 <img class="avatar user-thumb" src="assets/images/author/avatar.png" alt="avatar">
-                              <h4 class="user-name"><a href= "profile.php">name</a></h4>
+                              <h4 class="user-name"><a href="profile.php">name</a></h4>
                             </div>
                         </div>
                     </div>
@@ -233,8 +227,8 @@
                                           
                                         </ul>
                                     </li>
-                                  <li><a class="dropdown-item" href="login.php" onclick = "login()">Login</a></li>
-                                  <li><a class="dropdown-item" href="login.php" onclick = "logout()">Log Out</a></li> 
+                                  <li><a class="dropdown-item" href="login.php" onclick="login()">Login</a></li>
+                                  <li><a class="dropdown-item" href="login.php" onclick="logout()">Log Out</a></li> 
                                 </ul>
                             </nav>
                         </div>
@@ -243,14 +237,39 @@
                     <div class="col-lg-3 clearfix">
                         <div class="search-box">
                             <form action="#">
-                                <input type="text" name="search" placeholder="Search..." required>
+                                <input type="text" name="search" placeholder="Search..." required="">
                                 <i class="ti-search"></i>
                             </form>
                         </div>
                     </div>
                     <!-- mobile_menu -->
                     <div class="col-12 d-block d-lg-none">
-                        <div id="mobile_menu"></div>
+                        <div id="mobile_menu"><div class="slicknav_menu"><a href="#" aria-haspopup="true" role="button" tabindex="0" class="slicknav_btn slicknav_collapsed" style="outline: none;"><span class="slicknav_menutxt">MENU</span><span class="slicknav_icon"><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span></span></a><ul class="slicknav_nav slicknav_hidden" aria-hidden="true" role="menu" style="display: none;">
+                                    <li>
+                                        <a href="index.php" role="menuitem" tabindex="-1"><i class="ti-dashboard"></i><span>dashboard</span></a>
+
+                                    </li>
+                                    <li class="slicknav_collapsed slicknav_parent"><a href="#" role="menuitem" aria-haspopup="true" tabindex="-1" class="slicknav_item slicknav_row" style="outline: none;">
+                                        <a href="javascript:void(0)" tabindex="-1"><i class="ti-pie-chart"></i><span>Requirements</span></a>
+                                        <span class="slicknav_arrow">►</span></a><ul class="submenu slicknav_hidden" role="menu" aria-hidden="true" style="display: none;">
+                                            <li><a href="requirementslist.php" role="menuitem" tabindex="-1">List</a></li>
+                                            <li><a href="addrequirements.php" role="menuitem" tabindex="-1">Add Requirement (temp. location)</a></li>
+                                            <li><a href="editrequirements.php" role="menuitem" tabindex="-1">Edit Requirement (temp. location)</a></li>
+                                            <li><a href="deleterequirements.php" role="menuitem" tabindex="-1">Delete Requirement (temp. location)</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="slicknav_collapsed slicknav_parent"><a href="#" role="menuitem" aria-haspopup="true" tabindex="-1" class="slicknav_item slicknav_row" style="outline: none;">
+                                        <a href="javascript:void(0)" tabindex="-1"><i class="ti-palette"></i><span>Project</span></a>
+                                        <span class="slicknav_arrow">►</span></a><ul class="submenu slicknav_hidden" role="menu" aria-hidden="true" style="display: none;">
+                                            <li><a href="projectoverview.php" role="menuitem" tabindex="-1">Overview</a></li>
+                                            <li><a href="addprojectform.php" role="menuitem" tabindex="-1">Add Project (temporary location)</a></li>
+                                            <li><a href="editprojectform.php" role="menuitem" tabindex="-1">Edit Project (temporary location)</a></li>
+                                          
+                                        </ul>
+                                    </li>
+                                  <li><a class="dropdown-item" href="login.php" onclick="login()" role="menuitem" tabindex="-1">Login</a></li>
+                                  <li><a class="dropdown-item" href="login.php" onclick="logout()" role="menuitem" tabindex="-1">Log Out</a></li> 
+                                </ul></div></div>
                     </div>
                 </div>
             </div>
@@ -262,36 +281,36 @@
                 <div class="row">
                     <!-- seo fact area start -->
                     <div class="col-lg-8">
-                      <h4 style = "margin-top: 20px">Projects</h4>
+                      <h4 style="margin-top: 20px">Projects</h4>
                         <div class="row">
-                            <div class="col-md-6 mb-3" style = "margin-top: 1rem!important;">
+                            <div class="col-md-6 mb-3" style="margin-top: 1rem!important;">
                                 <div class="card">
-                                    <div class="seo-fact sbg1">
+                                    <div class="seo-fact sbg1"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
                                         <div class="p-4 d-flex justify-content-between align-items-center">
                                             <div class="seofct-icon"><i class="ti-thumb-up"></i> Project 1</div>
                                             <h2>2,315</h2>
                                         </div>
-                                        <canvas id="seolinechart1" height="50"></canvas>
+                                        <canvas id="seolinechart1" height="25" style="display: block; height: 17px; width: 103px;" width="154" class="chartjs-render-monitor"></canvas>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 mb-3" style = "margin-top: 1rem!important;">
+                            <div class="col-md-6 mb-3" style="margin-top: 1rem!important;">
                                 <div class="card">
-                                    <div class="seo-fact sbg2">
+                                    <div class="seo-fact sbg2"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
                                         <div class="p-4 d-flex justify-content-between align-items-center">
                                             <div class="seofct-icon"><i class="ti-share"></i>Project 2</div>
                                             <h2>3,984</h2>
                                         </div>
-                                        <canvas id="seolinechart2" height="50"></canvas>
+                                        <canvas id="seolinechart2" height="25" width="154" class="chartjs-render-monitor" style="display: block; height: 17px; width: 103px;"></canvas>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3 mb-lg-0">
                                 <div class="card">
                                     <div class="seo-fact sbg3">
-                                        <div class="p-4 d-flex justify-content-between align-items-center">
+                                        <div class="p-4 d-flex justify-content-between align-items-center"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
                                             <div class="seofct-icon">Project 3</div>
-                                            <canvas id="seolinechart3" height="60"></canvas>
+                                            <canvas id="seolinechart3" height="24" width="82" class="chartjs-render-monitor" style="display: block; height: 16px; width: 55px;"></canvas>
                                         </div>
                                     </div>
                                 </div>
@@ -299,22 +318,22 @@
                             <div class="col-md-6">
                                 <div class="card">
                                     <div class="seo-fact sbg4">
-                                        <div class="p-4 d-flex justify-content-between align-items-center">
+                                        <div class="p-4 d-flex justify-content-between align-items-center"><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div><div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
                                             <div class="seofct-icon">Project 4</div>
-                                            <canvas id="seolinechart4" height="60"></canvas>
+                                            <canvas id="seolinechart4" height="24" width="82" class="chartjs-render-monitor" style="display: block; height: 16px; width: 55px;"></canvas>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div>
-                            <div class="col-lg-12" style = "padding-left: 0">
-                              <div class = "row">
+                            <div class="col-lg-12" style="padding-left: 0">
+                              <div class="row">
                                 <!-- Progress Table start -->
-                                <div class="col-lg-12" style = "padding-left: 0">
+                                <div class="col-lg-12" style="padding-left: 0">
                                     <div class="card">
                                         <div class="card-body">
-                                            <h4 class="header-title" style = "font-size: 1.5rem">My Tasks</h4>
+                                            <h4 class="header-title" style="font-size: 1.5rem">My Tasks</h4>
                                             <div class="single-table">
                                                 <div class="table-responsive">
                                                     <table class="table table-hover progress-table text-center">
@@ -415,7 +434,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="header-title">Timeline</h4>
-                                <div class="timeline-area">
+                                <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 500px;"><div class="timeline-area" style="overflow: hidden; width: auto; height: 500px;">
                                     <div class="timeline-task">
                                         <div class="icon bg1">
                                             <i class="fa fa-envelope"></i>
@@ -469,7 +488,7 @@
                                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
                                         </p>
                                     </div>
-                                </div>
+                                </div><div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 500px;"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
                             </div>
                         </div>
                     </div>
@@ -489,132 +508,23 @@
     </div>
     <!-- main wrapper start -->
     <!-- offset area start -->
-    <div class="offset-area">
+    <div class="offset-area show_hide">
         <div class="offset-close"><i class="ti-close"></i></div>
         <ul class="nav offset-menu-tab">
-            <li><a class="active" data-toggle="tab" href="#activity">Activity</a></li>
-            <li><a data-toggle="tab" href="#settings">Settings</a></li>
+            
+            <li><a data-toggle="tab" href="#settings" class="active show">Settings</a></li>
         </ul>
         <div class="offset-content tab-content">
-            <div id="activity" class="tab-pane fade in show active">
-                <div class="recent-activity">
-                    <div class="timeline-task">
-                        <div class="icon bg1">
-                            <i class="fa fa-envelope"></i>
-                        </div>
-                        <div class="tm-title">
-                            <h4>Rashed sent you an email</h4>
-                            <span class="time"><i class="ti-time"></i>09:35</span>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
-                        </p>
-                    </div>
-                    <div class="timeline-task">
-                        <div class="icon bg2">
-                            <i class="fa fa-check"></i>
-                        </div>
-                        <div class="tm-title">
-                            <h4>Added</h4>
-                            <span class="time"><i class="ti-time"></i>7 Minutes Ago</span>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur.
-                        </p>
-                    </div>
-                    <div class="timeline-task">
-                        <div class="icon bg2">
-                            <i class="fa fa-exclamation-triangle"></i>
-                        </div>
-                        <div class="tm-title">
-                            <h4>You missed you Password!</h4>
-                            <span class="time"><i class="ti-time"></i>09:20 Am</span>
-                        </div>
-                    </div>
-                    <div class="timeline-task">
-                        <div class="icon bg3">
-                            <i class="fa fa-bomb"></i>
-                        </div>
-                        <div class="tm-title">
-                            <h4>Member waiting for you Attention</h4>
-                            <span class="time"><i class="ti-time"></i>09:35</span>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
-                        </p>
-                    </div>
-                    <div class="timeline-task">
-                        <div class="icon bg3">
-                            <i class="ti-signal"></i>
-                        </div>
-                        <div class="tm-title">
-                            <h4>You Added Kaji Patha few minutes ago</h4>
-                            <span class="time"><i class="ti-time"></i>01 minutes ago</span>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
-                        </p>
-                    </div>
-                    <div class="timeline-task">
-                        <div class="icon bg1">
-                            <i class="fa fa-envelope"></i>
-                        </div>
-                        <div class="tm-title">
-                            <h4>Ratul Hamba sent you an email</h4>
-                            <span class="time"><i class="ti-time"></i>09:35</span>
-                        </div>
-                        <p>Hello sir , where are you, i am egerly waiting for you.
-                        </p>
-                    </div>
-                    <div class="timeline-task">
-                        <div class="icon bg2">
-                            <i class="fa fa-exclamation-triangle"></i>
-                        </div>
-                        <div class="tm-title">
-                            <h4>Rashed sent you an email</h4>
-                            <span class="time"><i class="ti-time"></i>09:35</span>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
-                        </p>
-                    </div>
-                    <div class="timeline-task">
-                        <div class="icon bg2">
-                            <i class="fa fa-exclamation-triangle"></i>
-                        </div>
-                        <div class="tm-title">
-                            <h4>Rashed sent you an email</h4>
-                            <span class="time"><i class="ti-time"></i>09:35</span>
-                        </div>
-                    </div>
-                    <div class="timeline-task">
-                        <div class="icon bg3">
-                            <i class="fa fa-bomb"></i>
-                        </div>
-                        <div class="tm-title">
-                            <h4>Rashed sent you an email</h4>
-                            <span class="time"><i class="ti-time"></i>09:35</span>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
-                        </p>
-                    </div>
-                    <div class="timeline-task">
-                        <div class="icon bg3">
-                            <i class="ti-signal"></i>
-                        </div>
-                        <div class="tm-title">
-                            <h4>Rashed sent you an email</h4>
-                            <span class="time"><i class="ti-time"></i>09:35</span>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque at.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div id="settings" class="tab-pane fade">
+            
+            <div id="settings" class="tab-pane fade active show">
                 <div class="offset-settings">
                     <h4>General Settings</h4>
-                    <div class="settings-list">
+                    <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: calc(100vh - 158px);"><div class="settings-list" style="overflow: hidden; width: auto; height: calc(100vh - 158px);">
                         <div class="s-settings">
                             <div class="s-sw-title">
                                 <h5>Notifications</h5>
                                 <div class="s-swtich">
-                                    <input type="checkbox" id="switch1" />
+                                    <input type="checkbox" id="switch1">
                                     <label for="switch1">Toggle</label>
                                 </div>
                             </div>
@@ -624,7 +534,7 @@
                             <div class="s-sw-title">
                                 <h5>Show recent activity</h5>
                                 <div class="s-swtich">
-                                    <input type="checkbox" id="switch2" />
+                                    <input type="checkbox" id="switch2">
                                     <label for="switch2">Toggle</label>
                                 </div>
                             </div>
@@ -634,7 +544,7 @@
                             <div class="s-sw-title">
                                 <h5>Show your emails</h5>
                                 <div class="s-swtich">
-                                    <input type="checkbox" id="switch3" />
+                                    <input type="checkbox" id="switch3">
                                     <label for="switch3">Toggle</label>
                                 </div>
                             </div>
@@ -644,7 +554,7 @@
                             <div class="s-sw-title">
                                 <h5>Show Task statistics</h5>
                                 <div class="s-swtich">
-                                    <input type="checkbox" id="switch4" />
+                                    <input type="checkbox" id="switch4">
                                     <label for="switch4">Toggle</label>
                                 </div>
                             </div>
@@ -654,13 +564,13 @@
                             <div class="s-sw-title">
                                 <h5>Notifications</h5>
                                 <div class="s-swtich">
-                                    <input type="checkbox" id="switch5" />
+                                    <input type="checkbox" id="switch5">
                                     <label for="switch5">Toggle</label>
                                 </div>
                             </div>
                             <p>Use checkboxes when looking for yes or no answers.</p>
                         </div>
-                    </div>
+                    </div><div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 7px; position: absolute; top: 111px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 326.15px;"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
                 </div>
             </div>
         </div>
@@ -700,6 +610,7 @@
     <!-- others plugins -->
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/scripts.js"></script>
-</body>
 
-</html>
+
+
+</body></html>
