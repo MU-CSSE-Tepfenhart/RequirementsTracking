@@ -103,91 +103,14 @@
                                         </div><div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; height: 295.203px;"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
                                     </div>
                                 </li>
-                                <li class="dropdown">
-                                    <i class="fa fa-envelope-o dropdown-toggle" data-toggle="dropdown"><span>3</span></i>
-                                    <div class="dropdown-menu notify-box nt-enveloper-box">
-                                        <span class="notify-title">You have 3 new notifications <a href="#">view all</a></span>
-                                        <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 435px;"><div class="nofity-list" style="overflow: hidden; width: auto; height: 435px;">
-                                            <a href="#" class="notify-item">
-                                                <div class="notify-thumb">
-                                                    <img src="assets/images/author/author-img1.jpg" alt="image">
-                                                </div>
-                                                <div class="notify-text">
-                                                    <p>Aglae Mayer</p>
-                                                    <span class="msg">Hey I am waiting for you...</span>
-                                                    <span>3:15 PM</span>
-                                                </div>
-                                            </a>
-                                            <a href="#" class="notify-item">
-                                                <div class="notify-thumb">
-                                                    <img src="assets/images/author/author-img2.jpg" alt="image">
-                                                </div>
-                                                <div class="notify-text">
-                                                    <p>Aglae Mayer</p>
-                                                    <span class="msg">When you can connect with me...</span>
-                                                    <span>3:15 PM</span>
-                                                </div>
-                                            </a>
-                                            <a href="#" class="notify-item">
-                                                <div class="notify-thumb">
-                                                    <img src="assets/images/author/author-img3.jpg" alt="image">
-                                                </div>
-                                                <div class="notify-text">
-                                                    <p>Aglae Mayer</p>
-                                                    <span class="msg">I missed you so much...</span>
-                                                    <span>3:15 PM</span>
-                                                </div>
-                                            </a>
-                                            <a href="#" class="notify-item">
-                                                <div class="notify-thumb">
-                                                    <img src="assets/images/author/author-img4.jpg" alt="image">
-                                                </div>
-                                                <div class="notify-text">
-                                                    <p>Aglae Mayer</p>
-                                                    <span class="msg">Your product is completely Ready...</span>
-                                                    <span>3:15 PM</span>
-                                                </div>
-                                            </a>
-                                            <a href="#" class="notify-item">
-                                                <div class="notify-thumb">
-                                                    <img src="assets/images/author/author-img2.jpg" alt="image">
-                                                </div>
-                                                <div class="notify-text">
-                                                    <p>Aglae Mayer</p>
-                                                    <span class="msg">Hey I am waiting for you...</span>
-                                                    <span>3:15 PM</span>
-                                                </div>
-                                            </a>
-                                            <a href="#" class="notify-item">
-                                                <div class="notify-thumb">
-                                                    <img src="assets/images/author/author-img1.jpg" alt="image">
-                                                </div>
-                                                <div class="notify-text">
-                                                    <p>Aglae Mayer</p>
-                                                    <span class="msg">Hey I am waiting for you...</span>
-                                                    <span>3:15 PM</span>
-                                                </div>
-                                            </a>
-                                            <a href="#" class="notify-item">
-                                                <div class="notify-thumb">
-                                                    <img src="assets/images/author/author-img3.jpg" alt="image">
-                                                </div>
-                                                <div class="notify-text">
-                                                    <p>Aglae Mayer</p>
-                                                    <span class="msg">Hey I am waiting for you...</span>
-                                                    <span>3:15 PM</span>
-                                                </div>
-                                            </a>
-                                        </div><div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; height: 238.019px;"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
-                                    </div>
-                                </li>
+                                
                                 <li class="settings-btn active">
                                     <i class="ti-settings"></i>
                                 </li>
                             </ul>
                         </div>
                         <div class="clearfix d-md-inline-block d-block">
-                            <div class="user-profile m-0">
+                            <div class="user-profile m-0" style ="background:none">
                                 <img class="avatar user-thumb" src="assets/images/author/avatar.png" alt="avatar">
                               <h4 class="user-name"><a href="profile.php">name</a></h4>
                             </div>
