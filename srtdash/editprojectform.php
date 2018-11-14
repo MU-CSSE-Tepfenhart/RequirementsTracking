@@ -1,6 +1,8 @@
 <!doctype html>
 	<html class="no-js" lang="en">
-	
+	<?php
+	  include("../../reqd_connection.php")
+	?>
 
 	<head>
 	    <meta charset="utf-8">
@@ -364,7 +366,7 @@
 	        <!-- footer area start-->
 	        <footer>
 	            <div class="footer-area">
-	                <p>© Copyright 2018. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
+	                <p>Â© Copyright 2018. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
 	            </div>
 	        </footer>
 	        <!-- footer area end-->
