@@ -195,7 +195,7 @@
                         <div class="clearfix d-md-inline-block d-block">
                             <div class="user-profile m-0">
                                 <img class="avatar user-thumb" src="assets/images/author/avatar.png" alt="avatar">
-                                <h4 class="user-name">name<i class="fa fa-angle-down"></i></h4>
+                              <h4 class="user-name"><a href= "profile.php">name</a></h4>
                             </div>
                         </div>
                     </div>
@@ -495,7 +495,7 @@
            
             <li><a data-toggle="tab" href="#settings">Settings</a></li>
         </ul>
-
+          <div class="offset-content tab-content">
             <div id="settings" class="tab-pane fade">
                 <div class="offset-settings">
                     <h4>General Settings</h4>
