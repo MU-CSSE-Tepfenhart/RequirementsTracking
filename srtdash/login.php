@@ -36,14 +36,12 @@
     </div>
     <!-- preloader area end -->
     <!-- login area start -->
-    <div class="login-area">
     <div class="login-area login-bg">
         <div class="container">
             <div class="login-box ptb--100">
                 <form>
                     <div class="login-form-head">
                         <h4>Sign In</h4>
-                        <p>Hello there, Sign in and start managing your Admin Template</p>
                         <p>Hello there! Sign in and start managing your project</p>
                     </div>
                     <div class="login-form-body">
@@ -70,14 +68,6 @@
                         </div>
                         <div class="submit-btn-area">
                             <button id="form_submit" type="submit">Submit <i class="ti-arrow-right"></i></button>
-                            <div class="login-other row mt-4">
-                                <div class="col-6">
-                                    <a class="fb-login" href="#">Log in with <i class="fa fa-facebook"></i></a>
-                                </div>
-                                <div class="col-6">
-                                    <a class="google-login" href="#">Log in with <i class="fa fa-google"></i></a>
-                                </div>
-                            </div>
                         </div>
                         <div class="form-footer text-center mt-5">
                             <p class="text-muted">Don't have an account? <a href="register.html">Sign up</a></p>
@@ -98,10 +88,9 @@
     <script src="assets/js/metisMenu.min.js"></script>
     <script src="assets/js/jquery.slimscroll.min.js"></script>
     <script src="assets/js/jquery.slicknav.min.js"></script>
-
+    
     <!-- others plugins -->
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/scripts.js"></script>
 </body>
-
 </html>

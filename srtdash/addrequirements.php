@@ -1,11 +1,13 @@
 <!doctype html>
 	<html class="no-js" lang="en">
-	
+	<?php
+	  include("../../reqd_connection.php")
+	?>
 
 	<head>
 	    <meta charset="utf-8">
 	    <meta http-equiv="x-ua-compatible" content="ie=edge">
-	    <title>Edit Project Form - Reqd</title>
+	    <title>Add Requirement Form - Reqd</title>
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
 	    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -72,7 +74,7 @@
                                             <a href="#" class="notify-item">
                                                 <div class="notify-thumb"><i class="ti-comments-smiley btn-info"></i></div>
                                                 <div class="notify-text">
-                                                    <p>New Commetns On Post</p>
+                                                    <p>New Comments On Post</p>
                                                     <span>30 Seconds ago</span>
                                                 </div>
                                             </a>
@@ -86,7 +88,7 @@
                                             <a href="#" class="notify-item">
                                                 <div class="notify-thumb"><i class="ti-comments-smiley btn-info"></i></div>
                                                 <div class="notify-text">
-                                                    <p>New Commetns On Post</p>
+                                                    <p>New Comments On Post</p>
                                                     <span>30 Seconds ago</span>
                                                 </div>
                                             </a>
@@ -268,7 +270,7 @@
                 <div class="row align-items-center">
                     <div class="col-sm-6">
                         <div class="breadcrumbs-area clearfix">
-                            <h4 class="page-title pull-left">Edit Project</h4>
+                            <h4 class="page-title pull-left">Add Requirement</h4>
                         </div>
                     </div>
                 </div>
@@ -284,70 +286,72 @@
 	                            <div class="col-12 mt-5">
 	                                <div class="card">
 	                                    <div class="card-body">
-	                                        <h4 class="header-title">Edit Project</h4>
-	                                        <form>
+	                                        <h4 class="header-title">New Requirement</h4>
+	                                        
+                                            <form action="insert.php" method = "post">
+							
 							<fieldset disabled>
 								<div class="form-group">
-	                                            			<label for="example-text-input" class="col-form-label">Project ID</label>
-	                                            			<input class="form-control" type="text" value="#123456" id="example-text-input">
+	                                            			<label for="example-text-input" class="col-form-label">Requirement ID</label>
+	                                            			<input class="form-control" type="text" value="#1" id="example-text-input"
+                                                            name = "id">
 	                                        		</div>
 							</fieldset>
 
 							<div class="form-group">
-	                                            		<label for="example-text-input" class="col-form-label">Project Name</label>
-	                                            		<input class="form-control" type="text" value="" id="example-text-input">
+	                                            		<label for="example-text-input" class="col-form-label">Requirement Title</label>
+	                                            		<input class="form-control" type="text" value="" id="example-text-input" 
+                                                        name = "title" >
 	                                        	</div>
+
+                                             <div class="form-group">
+                                                        <label for="example-text-input" class="col-form-label">Short Description</label>
+                                                        <input class="form-control" type="text" value="" id="example-text-input"
+                                                        name = "summary">
+                                                </div>
 
 	                                        	<div class="form-group">
 	                                            		<label for="example-date-input" class="col-form-label">Start Date</label>
-	                                            		<input class="form-control" type="date" value="2018-03-05" id="example-date-input">
+	                                            		<input class="form-control" type="date" value="2018-03-05" id="example-date-input"
+                                                        name = "sdate">
 	                                        	</div>
 
 	                                        	<div class="form-group">
-	                                            		<label for="example-date-input" class="col-form-label">End Date</label>
-	                                            		<input class="form-control" type="date" value="2018-03-05" id="example-date-input">
+	                                            		<label for="example-date-input" class="col-form-label">Due Date</label>
+	                                            		<input class="form-control" type="date" value="2018-03-05" id="example-date-input"
+                                                        name = "edate">
 	                                        	</div>
 
-	                                        	<div class="form-group">
-	                                            		<label class="col-form-label">Company</label>
-	                                            		<select class="form-control">
-	                                                		<option>Select</option>
-	                                                		<option>Options</option>
-	                                                		<option>From</option>
-									<option>Database</option>
-									<option>New Company (link to form to create new company)</option>
-	                                            		</select>
-								<button type="button" class="btn btn-primary mt-4 pr-4 pl-4">New Company</button>						
-	                                        	</div>
+
+                                              <div class="form-group">
+                                                        <label for="example-text-input" class="col-form-label">Original Estimate</label>
+                                                        <input class="form-control" type="text" value="" id="example-text-input">
+                                                </div>
+
+
+                                                <div class="form-group">
+                                                        <label for="example-text-input" class="col-form-label">Time Spent</label>
+                                                        <input class="form-control" type="text" value="" id="example-text-input">
+                                                </div>
+
+                                            <div class="form-group">
+                                                        <label for="example-text-input" class="col-form-label">Complexity</label>
+                                                        <input class="form-control" type="text" value="" id="example-text-input">
+                                                </div>
 
 	                                        	<div class="form-group">
-	                                            		<label class="col-form-label">Customer</label>
-	                                            		<select class="form-control">
-	                                                		<option>Select</option>
-	                                                		<option>Options</option>
-	                                                		<option>From</option>
-									<option>Database</option>
-									<option>New Customer(link to form to create new customer)</option>
-	                                            		</select>
-								<button type="button" class="btn btn-primary mt-4 pr-4 pl-4">New Customer</button>
+                                                        <label for="example-text-input" class="col-form-label">Assignee</label>
+                                                        <input class="form-control" type="text" value="" id="example-text-input"
+                                                        name = "assignee">
+                                                </div>
+														
 	                                        	</div>
 
-	                                        	<div class="form-group">
-	                                            		<label class="col-form-label">Team</label>
-	                                            		<select class="form-control">
-	                                                		<option>Select</option>
-	                                                		<option>Options</option>
-	                                                		<option>From</option>
-									<option>Database</option>
-									<option>New Team(link to form to create new team)</option>
-	                                            		</select>
-								<button type="button" class="btn btn-primary mt-4 pr-4 pl-4">New Team</button>
-	                                        	</div>
+	                                        	
 
 	                                            
 	                                            <button type="button" class="btn btn-primary mt-4 pr-4 pl-4">Cancel</button>
-						    <button type="button" class="btn btn-primary mt-4 pr-4 pl-4">Delete Project</button>
-						    <button type="submit" class="btn btn-primary mt-4 pr-4 pl-4">Save Changes</button>
+						    <button type="submit" class="btn btn-primary mt-4 pr-4 pl-4">Add Requirement</button>
 	                                        </form>
 	                                    </div>
 	                                </div>
@@ -364,7 +368,7 @@
 	        <!-- footer area start-->
 	        <footer>
 	            <div class="footer-area">
-	                <p>© Copyright 2018. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
+	                <p>Â© Copyright 2018. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
 	            </div>
 	        </footer>
 	        <!-- footer area end-->
