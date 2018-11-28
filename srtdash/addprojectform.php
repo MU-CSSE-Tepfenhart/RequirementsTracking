@@ -287,28 +287,33 @@
 	                                <div class="card">
 	                                    <div class="card-body">
 	                                        <h4 class="header-title">New Project</h4>
-	                                        <form>
+	                                        <form action = "insertproject.php" method = "post">
 							
 							<fieldset disabled>
 								<div class="form-group">
 	                                            			<label for="example-text-input" class="col-form-label">Project ID</label>
-	                                            			<input class="form-control" type="text" value="#123456" id="example-text-input">
+	                                            			<input class="form-control" type="text" value="#123456" id="example-text-input"
+                                                            name = "id">
+
 	                                        		</div>
 							</fieldset>
 
 							<div class="form-group">
 	                                            		<label for="example-text-input" class="col-form-label">Project Name</label>
-	                                            		<input class="form-control" type="text" value="" id="example-text-input">
+	                                            		<input class="form-control" type="text" value="" id="example-text-input"
+                                                        name = "name">
 	                                        	</div>
 
 	                                        	<div class="form-group">
 	                                            		<label for="example-date-input" class="col-form-label">Start Date</label>
-	                                            		<input class="form-control" type="date" value="2018-03-05" id="example-date-input">
+	                                            		<input class="form-control" type="date" value="2018-03-05" id="example-date-input"
+                                                        name = "sdate">
 	                                        	</div>
 
 	                                        	<div class="form-group">
 	                                            		<label for="example-date-input" class="col-form-label">End Date</label>
-	                                            		<input class="form-control" type="date" value="2018-03-05" id="example-date-input">
+	                                            		<input class="form-control" type="date" value="2018-03-05" id="example-date-input"
+                                                        name = "edate">
 	                                        	</div>
 
 	                                        	<div class="form-group">
@@ -318,7 +323,7 @@
 	                                                		<option>Options</option>
 	                                                		<option>From</option>
 									<option>Database</option>
-									<option>New Company (link to form to create new company)</option>
+									<option><a href = "editcompanyform.php"/> </option>
 	                                            		</select>
 								<button type="button" class="btn btn-primary mt-4 pr-4 pl-4">New Company</button>						
 	                                        	</div>
@@ -330,7 +335,7 @@
 	                                                		<option>Options</option>
 	                                                		<option>From</option>
 									<option>Database</option>
-									<option>New Customer(link to form to create new customer)</option>
+									<option><a href = "editcustomerform.php"/></option>
 	                                            		</select>
 								<button type="button" class="btn btn-primary mt-4 pr-4 pl-4">New Customer</button>
 	                                        	</div>
@@ -342,7 +347,7 @@
 	                                                		<option>Options</option>
 	                                                		<option>From</option>
 									<option>Database</option>
-									<option>New Team(link to form to create new team)</option>
+									<option><a href = "editteamform.php"/></option>
 	                                            		</select>
 								<button type="button" class="btn btn-primary mt-4 pr-4 pl-4">New Team</button>
 	                                        	</div>
@@ -568,4 +573,3 @@
 	
 
 	</html>
-

@@ -339,7 +339,19 @@
                                                         <input class="form-control" type="text" value="" id="example-text-input">
                                                 </div>
 
+                                                <div class="form-group">
+                                                        <label for="example-text-input" class="col-form-label">Parent Requirement</label>
+                                                        <input class="form-control" type="text" value="" id="example-text-input"
+                                                        name = "parent">
+                                                </div>
+
 	                                        	<div class="form-group">
+                                                        <label for="example-text-input" class="col-form-label">Assigner</label>
+                                                        <input class="form-control" type="text" value="" id="example-text-input"
+                                                        name = "assigner">
+                                                </div>
+
+                                                <div class="form-group">
                                                         <label for="example-text-input" class="col-form-label">Assignee</label>
                                                         <input class="form-control" type="text" value="" id="example-text-input"
                                                         name = "assignee">
@@ -570,4 +582,3 @@
 	
 
 	</html>
-
