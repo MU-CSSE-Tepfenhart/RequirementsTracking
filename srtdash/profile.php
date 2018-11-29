@@ -222,24 +222,29 @@
                             <nav>
                                 <ul id="nav_menu">
                                     <li>
-                                        <a href="index.html"><i class="ti-dashboard"></i><span>dashboard</span></a>
+                                        <a href="index.php"><i class="ti-dashboard"></i><span>dashboard</span></a>
 
                                     </li>
                                     <li>
                                         <a href="javascript:void(0)"><i class="ti-pie-chart"></i><span>Requirements</span></a>
                                         <ul class="submenu">
-                                            <li><a href="requirements.php">Requirements</a></li>
-                                            <li><a href="requirementsgrid.php">Reqirements Grid</a></li>
-                                            <li><a href="requirementslist.php">Requirements List</a></li>
+                                            <li><a href="requirementslist.php">List</a></li>
+                                            <li><a href="addrequirements.php">Add Requirement (temp. location)</a></li>
+                                            <li><a href="editrequirements.php">Edit Requirement (temp. location)</a></li>
+                                            <li><a href="deleterequirements.php">Delete Requirement (temp. location)</a></li>
                                         </ul>
                                     </li>
                                     <li>
                                         <a href="javascript:void(0)"><i class="ti-palette"></i><span>Project</span></a>
                                         <ul class="submenu">
                                             <li><a href="projectoverview.php">Overview</a></li>
+                                            <li><a href="addprojectform.php">Add Project (temporary location)</a></li>
+                                            <li><a href="editprojectform.php">Edit Project (temporary location)</a></li>
+                                          
                                         </ul>
                                     </li>
-                                    <li><a href="profile.php"><i class="ti-map-alt"></i> <span>Profile</span></a></li>
+                                  <li><a class="dropdown-item" href="login.php" onclick="login()">Login</a></li>
+                                  <li><a class="dropdown-item" href="login.php" onclick="logout()">Log Out</a></li> 
                                 </ul>
                             </nav>
                         </div>
@@ -248,21 +253,45 @@
                     <div class="col-lg-3 clearfix">
                         <div class="search-box">
                             <form action="#">
-                                <input type="text" name="search" placeholder="Search..." required>
+                                <input type="text" name="search" placeholder="Search..." required="">
                                 <i class="ti-search"></i>
                             </form>
                         </div>
                     </div>
                     <!-- mobile_menu -->
                     <div class="col-12 d-block d-lg-none">
-                        <div id="mobile_menu"></div>
+                        <div id="mobile_menu"><div class="slicknav_menu"><a href="#" aria-haspopup="true" role="button" tabindex="0" class="slicknav_btn slicknav_collapsed" style="outline: none;"><span class="slicknav_menutxt">MENU</span><span class="slicknav_icon"><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span></span></a><ul class="slicknav_nav slicknav_hidden" aria-hidden="true" role="menu" style="display: none;">
+                                    <li>
+                                        <a href="index.php" role="menuitem" tabindex="-1"><i class="ti-dashboard"></i><span>dashboard</span></a>
+
+                                    </li>
+                                    <li class="slicknav_collapsed slicknav_parent"><a href="#" role="menuitem" aria-haspopup="true" tabindex="-1" class="slicknav_item slicknav_row" style="outline: none;">
+                                        <a href="javascript:void(0)" tabindex="-1"><i class="ti-pie-chart"></i><span>Requirements</span></a>
+                                        <span class="slicknav_arrow">►</span></a><ul class="submenu slicknav_hidden" role="menu" aria-hidden="true" style="display: none;">
+                                            <li><a href="requirementslist.php" role="menuitem" tabindex="-1">List</a></li>
+                                            <li><a href="addrequirements.php" role="menuitem" tabindex="-1">Add Requirement (temp. location)</a></li>
+                                            <li><a href="editrequirements.php" role="menuitem" tabindex="-1">Edit Requirement (temp. location)</a></li>
+                                            <li><a href="deleterequirements.php" role="menuitem" tabindex="-1">Delete Requirement (temp. location)</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="slicknav_collapsed slicknav_parent"><a href="#" role="menuitem" aria-haspopup="true" tabindex="-1" class="slicknav_item slicknav_row" style="outline: none;">
+                                        <a href="javascript:void(0)" tabindex="-1"><i class="ti-palette"></i><span>Project</span></a>
+                                        <span class="slicknav_arrow">►</span></a><ul class="submenu slicknav_hidden" role="menu" aria-hidden="true" style="display: none;">
+                                            <li><a href="projectoverview.php" role="menuitem" tabindex="-1">Overview</a></li>
+                                            <li><a href="addprojectform.php" role="menuitem" tabindex="-1">Add Project (temporary location)</a></li>
+                                            <li><a href="editprojectform.php" role="menuitem" tabindex="-1">Edit Project (temporary location)</a></li>
+                                          
+                                        </ul>
+                                    </li>
+                                  <li><a class="dropdown-item" href="login.php" onclick="login()" role="menuitem" tabindex="-1">Login</a></li>
+                                  <li><a class="dropdown-item" href="login.php" onclick="logout()" role="menuitem" tabindex="-1">Log Out</a></li> 
+                                </ul></div></div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- header area end -->
         <!-- page title area end -->
-
             <div class="main-content-inner">
                 <div class="row">
                     <div class="col-lg-6 col-ml-12">
