@@ -1,13 +1,13 @@
-<!doctype html>
+﻿<!doctype html>
 	<html class="no-js" lang="en">
 	<?php
-  		include("../../reqd_connection.php")
+	  include("../../reqd_connection.php")
 	?>
-		
+
 	<head>
 	    <meta charset="utf-8">
 	    <meta http-equiv="x-ua-compatible" content="ie=edge">
-	    <title>Add Project Form - Reqd</title>
+	    <title>Edit Customer Form - Reqd</title>
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
 	    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -270,7 +270,7 @@
                 <div class="row align-items-center">
                     <div class="col-sm-6">
                         <div class="breadcrumbs-area clearfix">
-                            <h4 class="page-title pull-left">Add Project</h4>
+                            <h4 class="page-title pull-left">Edit Customer</h4>
                         </div>
                     </div>
                 </div>
@@ -286,75 +286,28 @@
 	                            <div class="col-12 mt-5">
 	                                <div class="card">
 	                                    <div class="card-body">
-	                                        <h4 class="header-title">New Project</h4>
-	                                        <form action = "insertproject.php" method = "post">
-							
+	                                        <h4 class="header-title">Edit Customer</h4>
+	                                        <form>
 							<fieldset disabled>
 								<div class="form-group">
-	                                            			<label for="example-text-input" class="col-form-label">Project ID</label>
-	                                            			<input class="form-control" type="text" value="#123456" id="example-text-input"
-                                                            name = "id">
-
+	                                            			<label for="example-text-input" class="col-form-label">Customer ID</label>
+	                                            			<input class="form-control" type="text" value="#123456" id="example-text-input">
 	                                        		</div>
 							</fieldset>
 
 							<div class="form-group">
-	                                            		<label for="example-text-input" class="col-form-label">Project Name</label>
-	                                            		<input class="form-control" type="text" value="" id="example-text-input"
-                                                        name = "name">
+	                                            		<label for="example-text-input" class="col-form-label">Customer Name</label>
+	                                            		<input class="form-control" type="text" value="" id="example-text-input">
 	                                        	</div>
 
-	                                        	<div class="form-group">
-	                                            		<label for="example-date-input" class="col-form-label">Start Date</label>
-	                                            		<input class="form-control" type="date" value="2018-03-05" id="example-date-input"
-                                                        name = "sdate">
+							<div class="form-group">
+	                                            		<label for="example-text-input" class="col-form-label">Customer Title</label>
+	                                            		<input class="form-control" type="text" value="" id="example-text-input">
 	                                        	</div>
 
-	                                        	<div class="form-group">
-	                                            		<label for="example-date-input" class="col-form-label">End Date</label>
-	                                            		<input class="form-control" type="date" value="2018-03-05" id="example-date-input"
-                                                        name = "edate">
-	                                        	</div>
-
-	                                        	<div class="form-group">
-	                                            		<label class="col-form-label">Company</label>
-	                                            		<select class="form-control">
-	                                                		<option>Select</option>
-	                                                		<option>Options</option>
-	                                                		<option>From</option>
-									<option>Database</option>
-									<option><a href = "editcompanyform.php"/> </option>
-	                                            		</select>
-								<button type="button" class="btn btn-primary mt-4 pr-4 pl-4">New Company</button>						
-	                                        	</div>
-
-	                                        	<div class="form-group">
-	                                            		<label class="col-form-label">Customer</label>
-	                                            		<select class="form-control">
-	                                                		<option>Select</option>
-	                                                		<option>Options</option>
-	                                                		<option>From</option>
-									<option>Database</option>
-									<option><a href = "editcustomerform.php"/></option>
-	                                            		</select>
-								<button type="button" class="btn btn-primary mt-4 pr-4 pl-4">New Customer</button>
-	                                        	</div>
-
-	                                        	<div class="form-group">
-	                                            		<label class="col-form-label">Team</label>
-	                                            		<select class="form-control">
-	                                                		<option>Select</option>
-	                                                		<option>Options</option>
-	                                                		<option>From</option>
-									<option>Database</option>
-									<option><a href = "editteamform.php"/></option>
-	                                            		</select>
-								<button type="button" class="btn btn-primary mt-4 pr-4 pl-4">New Team</button>
-	                                        	</div>
-
-	                                            
 	                                            <button type="button" class="btn btn-primary mt-4 pr-4 pl-4">Cancel</button>
-						    <button type="submit" class="btn btn-primary mt-4 pr-4 pl-4">Submit</button>
+						    <button type="button" class="btn btn-primary mt-4 pr-4 pl-4">Delete Customer</button>
+						    <button type="submit" class="btn btn-primary mt-4 pr-4 pl-4">Save Changes</button>
 	                                        </form>
 	                                    </div>
 	                                </div>
@@ -573,3 +526,4 @@
 	
 
 	</html>
+
