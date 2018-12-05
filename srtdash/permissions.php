@@ -49,7 +49,7 @@
                 <div class="row align-items-center">
                     <div class="col-md-3">
                         <div class="logo">
-                            <a href="index.html">Dashboard | Reqt</a>
+                            <a href="index.php">Dashboard | Reqt</a>
                         </div>
                     </div>
                     <!-- profile info & task notification -->
@@ -222,23 +222,27 @@
                             <nav>
                                 <ul id="nav_menu">
                                     <li>
-                                        <a href="index.html"><i class="ti-dashboard"></i><span>dashboard</span></a>
+                                        <a href="index.php"><i class="ti-dashboard"></i><span>dashboard</span></a>
 
                                     </li>
                                     <li>
-                                        <a href="javascript:void(0)"><i class="ti-pie-chart"></i><span>Requirements</span></a>
-                                        <ul class="submenu">
-                                            <li><a href="requirements.php">Requirements</a></li>
-                                            <li><a href="requirementsgrid.php">Reqirements Grid</a></li>
-                                            <li><a href="requirementslist.php">Requirements List</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)"><i class="ti-palette"></i><span>Project</span></a>
-                                        <ul class="submenu">
-                                            <li><a href="projectoverview.php">Overview</a></li>
-                                        </ul>
-                                    </li>
+                                        	<a href="javascript:void(0)"><i class="ti-pie-chart"></i><span>Requirements</span></a>
+                                        		<ul class="submenu">
+                                            			<li><a href="requirementslist.php">List</a></li>
+                                            			<li><a href="addrequirements.php">Add Requirement (temp. location)</a></li>
+						    		<li><a href="editrequirements.php">Edit Requirement (temp. location)</a></li>
+                                           			 <li><a href="deleterequirements.php">Delete Requirement (temp. location)</a></li>
+                                        		</ul>
+                                    	</li>
+                                    	<li>
+                                       		<a href="javascript:void(0)"><i class="ti-palette"></i><span>Project</span></a>
+                                        		<ul class="submenu">
+                                            			<li><a href="projectoverview.php">Overview</a></li>
+                                            			<li><a href="addprojectform.php">Add Project (temporary location)</a></li>
+                                           			 <li><a href="editprojectform.php">Edit Project (temporary location)</a></li>
+                                          
+                                        		</ul>
+                                    	</li>
                                     <li><a href="profile.php"><i class="ti-map-alt"></i> <span>Profile</span></a></li>
                                 </ul>
                             </nav>
