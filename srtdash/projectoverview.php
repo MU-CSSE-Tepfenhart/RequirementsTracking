@@ -47,7 +47,9 @@
         <!-- main content area start -->
         <div class="main-content">
 
+
 		<?php include 'navbar.php';?>
+
 
             <div class="main-content-inner">
                 <div class="row">

@@ -42,9 +42,10 @@
         <div class="main-content">
 
 	  <!-- main wrapper start -->
-		<?php include 'navbar.php';?>
-        <!-- page title area end -->
 
+		<?php include 'navbar.php';?>
+
+        <!-- page title area end -->
             <div class="main-content-inner">
                 <div class="row">
                     <div class="col-lg-6 col-ml-12">

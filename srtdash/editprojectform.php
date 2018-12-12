@@ -42,6 +42,7 @@
 	        <!-- main content area start -->
 	        <div class="main-content">
 
+
 		<?php include 'navbar.php';?>
 
 <!-- page title area start -->
